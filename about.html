@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <title>About Us - Chandani Secondary English School</title>
+    <link rel="icon" href="./images/logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            color: #334155;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(16, 42, 66, 0.9) 0%, rgba(37, 99, 235, 0.7) 100%);
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            bottom: -10px;
+            left: 25%;
+            border-radius: 2px;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .timeline-item:not(:last-child):after {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 34px;
+            height: calc(100% - 34px);
+            width: 2px;
+            background: #e5e7eb;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .director-card {
+            perspective: 1000px;
+        }
+        .director-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .director-card:hover .director-inner {
+            transform: rotateY(-5deg);
+        }
+        .signature {
+            font-family: 'Brush Script MT', cursive;
+        }
+        .quote-mark {
+            font-size: 6rem;
+            line-height: 1;
+            opacity: 0.1;
+        }
+        
+        /* Mobile-responsive padding */
+        @media (max-width: 768px) {
+            /* Add padding to containers */
+            .container.mx-auto {
+                max-width: 100vw !important;
+                padding-left: 1rem;  /* 16px padding on mobile */
+                padding-right: 1rem;
+            }
+            
+            /* Full-width sections but with side padding */
+            .container, section, footer {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            
+            /* Slightly reduce side margins for grids/galleries */
+            .grid.grid-cols-2 {
+                gap: 0.5rem;  /* Smaller gap on mobile */
+            }
+            
+            /* Ensure text/content doesn't touch edges */
+            .text-center, .hero-content {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-sm border-b border-gray-100">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="flex items-center group">
+                    <img src="./images/logo.jpg" alt="School Logo" class="h-12 w-12 object-cover rounded-full mr-3 border-2 border-blue-500 transition-transform duration-300 group-hover:scale-105">
+                    <div>
+                        <h1 class="text-xl font-bold text-blue-800 group-hover:text-blue-600 transition-colors">Chandani Secondary School</h1>
+                        <p class="text-xs text-gray-600 group-hover:text-gray-800 transition-colors">Lalitpur, Nepal</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="hidden lg:flex space-x-6 items-center">
+                <a href="index.html" class="relative text-gray-600 hover:text-blue-600 transition-colors px-3 py-2 group">
+                    <span>Home</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="relative text-blue-800 hover:text-blue-600 transition-colors px-3 py-2 group">
+                    <span>About</span>
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600"></span>
+                </a>
+                <a href="gallery.html" class="relative text-gray-600 hover:text-blue-600 transition-colors px-3 py-2 group">
+                    <span>Gallery</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="contact.html" class="relative text-gray-600 hover:text-blue-600 transition-colors px-3 py-2 group">
+                    <span>Contact</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#admissions" class="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    Admissions
+                </a>
+            </div>
+            
+            <button class="lg:hidden text-gray-600 focus:outline-none" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-white/95 w-full py-4 px-6 shadow-lg backdrop-blur-sm" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="block py-2 text-gray-600 border-b border-gray-100 hover:text-blue-600 hover:bg-blue-50 px-2 rounded transition-colors">Home</a>
+                <a href="#" class="block py-2 text-blue-800 border-b border-gray-100 hover:text-blue-600 hover:bg-blue-50 px-2 rounded transition-colors">About</a>
+                <a href="gallery.html" class="block py-2 text-gray-600 border-b border-gray-100 hover:text-blue-600 hover:bg-blue-50 px-2 rounded transition-colors">Gallery</a>
+                <a href="contact.html" class="block py-2 text-gray-600  border-b border-gray-100 hover:bg-blue-50 px-2 rounded transition-colors">Contact</a>
+                <a href="index.html#admissions" class="block bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center font-medium py-3 px-6 rounded-full mt-2 shadow-md hover:shadow-lg transition-all">
+                    Admissions
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] min-h-[400px] bg-blue-800 overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <img src="./images/008cc1b1-2795-426a-a971-66f8d12287b7.jfif" alt="School Building" class="w-full h-full object-cover bg-blue-800">
+        <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+            <div class="text-white max-w-4xl mx-auto px-4">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-down">
+                    <span class="gradient-text">About Our</span> School
+                </h1>
+                <p class="text-xl max-w-3xl mx-auto mb-8" data-aos="fade-down" data-aos-delay="100">Shaping young minds with excellence, tradition, and innovation since 1995.</p>
+                <div class="flex space-x-4 justify-center" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="#mission" class="bg-white text-blue-800 px-6 py-3 rounded-full font-medium hover:bg-blue-800 hover:text-white transition">Our Mission</a>
+                    <a href="#history" class="border-2 border-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-blue-800 transition">Our History</a>
+                </div>
+            </div>
+        </div>
+</section>
+
+    <!-- Mission & Vision -->
+    <section id="mission" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4 section-title" data-aos="fade-up">
+                    Our <span class="gradient-text">Core Values</span>
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">
+                    The foundation of everything we do at Chandani Secondary School
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover" data-aos="fade-up">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Our Mission</h3>
+                    <p class="text-gray-600 leading-relaxed">To provide a transformative educational experience that combines academic excellence with character development, preparing students to meet global challenges while remaining rooted in Nepali values and traditions.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-eye text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Our Vision</h3>
+                    <p class="text-gray-600 leading-relaxed">To be recognized as Lalitpur's premier institution for holistic education, developing innovative thinkers and ethical leaders who will shape a better future for our nation and the world.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-heart text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Our Values</h3>
+                    <ul class="text-gray-600 space-y-3">
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-1 rounded-full mr-3 mt-1">
+                                <i class="fas fa-check text-blue-600 text-xs"></i>
+                            </div>
+                            <span>Integrity and ethical conduct</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-1 rounded-full mr-3 mt-1">
+                                <i class="fas fa-check text-blue-600 text-xs"></i>
+                            </div>
+                            <span>Respect for diversity</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-1 rounded-full mr-3 mt-1">
+                                <i class="fas fa-check text-blue-600 text-xs"></i>
+                            </div>
+                            <span>Commitment to excellence</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-1 rounded-full mr-3 mt-1">
+                                <i class="fas fa-check text-blue-600 text-xs"></i>
+                            </div>
+                            <span>Social responsibility</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Our Promise</h3>
+                    <p class="text-gray-600 leading-relaxed">Every student who graduates from Chandani Secondary School will be equipped with the knowledge, skills, and values needed to succeed in higher education and life, while maintaining a strong connection to their cultural heritage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our History -->
+    <section id="history" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4 section-title" data-aos="fade-up">
+                    Our <span class="gradient-text">Journey Through Time</span>
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">
+                    From humble beginnings to becoming an educational leader in Lalitpur
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="relative timeline-item pl-16 pb-12" data-aos="fade-up">
+                    <div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600">
+                        <i class="fas fa-school text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">1989 - Foundation</h3>
+                    <p class="text-gray-600">Established with just 29 students in a small building in Lalitpur, Chandani Secondary School began its journey with a vision to transform education in Nepal.</p>
+                </div>
+                <div class="relative timeline-item pl-16 pb-12" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-green-100 text-green-600">
+                        <i class="fas fa-award text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">2004 - First Recognition</h3>
+                    <p class="text-gray-600">Primary level recogntion upto grade 1.</p>
+                </div>
+                <div class="relative timeline-item pl-16 pb-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-yellow-100 text-yellow-600">
+                        <i class="fas fa-expand text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">2008 - Higher Level Education</h3>
+                    <p class="text-gray-600">First batch of SLC appearing student.</p>
+                </div>
+                <div class="relative timeline-item pl-16 pb-12" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-purple-100 text-purple-600">
+                        <i class="fas fa-globe text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">2015 - School Expansion</h3>
+                    <p class="text-gray-600">Moved to our current green school in Lalitpur, featuring modern classrooms, science labs, and sports facilities to accommodate growing demand.</p>
+                </div>
+                <div class="relative timeline-item pl-16" data-aos="fade-up" data-aos-delay="400">
+                    <div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-red-100 text-red-600">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">2020 - Digital Transformation</h3>
+                    <p class="text-gray-600">Implemented comprehensive digital learning infrastructure, becoming a pioneer in blended education in Nepal during the pandemic challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4 section-title" data-aos="fade-up">
+                    Our <span class="gradient-text">Leadership</span>
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">
+                    The dedicated professionals guiding our institution
+                </p>
+            </div>
+        </div>
+
+        <div class="director-card bg-white rounded-2xl shadow-xl overflow-hidden max-w-5xl mx-auto mb-12">
+            <div class="director-inner flex flex-col md:flex-row">
+                <!-- Director Image -->
+                <div class="md:w-1/3 bg-indigo-100 flex items-center justify-center p-8">
+                    <div class="relative">
+                        <div class="absolute -inset-4 border-4 border-indigo-200 rounded-full"></div>
+                        <img src="./images/33127447_1266587933444245_7742155459913580544_n.jpg"  
+                             alt="Managing Director"
+                             class="w-64 h-64 rounded-full object-cover relative z-10 border-4 border-white shadow-lg">
+                    </div>
+                </div>
+
+                <!-- Message Content -->
+                <div class="md:w-2/3 p-8 md:p-12 relative" data-aos="fade-left">
+                     <i class="fas fa-quote-left text-3xl text-indigo-600"></i>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">हाम्रो प्रबन्ध निर्देशकबाट सन्देश</h3>
+                        <div class="space-y-4 text-gray-600 mb-8">
+                            <p>आदरणीय अभिभावकज्यूहरू, प्रिय विद्यार्थीहरू र शिक्षकज्यूहरू,</p>
+                            <p>चाँदनी अंग्रेजी माध्यमिक विद्यालयले आफ्नो स्थापना देखिनै गुणवत्तायुक्त शिक्षा, आधुनिक शिक्षण पद्धति र विद्यार्थी–केन्द्रित सिकाइ प्रक्रियामार्फत समग्र विकासमा केन्द्रित रहँदै आएको छ। र यस यात्रामा तपाईंहरूको निरन्तर सहयोग, विश्वास र समर्पणको लागि म तपाईंहरूलाई धन्यवाद दिन चाहन्छु।</p>
+                            <p>विद्यार्थीहरूका बहुआयामिक विकासका लागि हामीले शिक्षासँगै सह–पाठ्यक्रम गतिविधिहरू, प्रविधिको प्रयोग, र नैतिक शिक्षामा पनि जोड दिइरहेका छौं। हामी चाहन्छौं कि हाम्रा विद्यार्थीहरू केवल पाठ्यपुस्तकको ज्ञानमा मात्र सिमित नहोस्, बरु उनीहरू आत्मनिर्भर, जिम्मेवार र समाजप्रति संवेदनशील नागरिक बनून्।</p>
+                            <p>अन्त्यमा, म सम्पूर्ण अभिभावकज्यूहरूलाई आफ्ना बालबालिकाको शिक्षामा सक्रिय सहभागी हुन अनुरोध गर्दछु। अभिभावक, शिक्षक र विद्यार्थीबीचको सशक्त समन्वयमार्फत नै शिक्षाको गुणस्तर उकास्न सकिन्छ भन्ने हाम्रो दृढ विश्वास छ।</p>
+                            <p>तपाईंहरूको विश्वास, सहयोग र साथप्रति हामी सधैँ आभारी छौँ।</p>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="font-medium text-gray-800">शुभकामना सहित,</p>
+                                <div class="signature text-3xl text-indigo-600 mt-2">गंगामान ब्यञ्जनकार</div>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-indigo-600 hover:text-indigo-800">
+                                    <i class="fas fa-envelope text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 mx-4 md:mx-8 lg:mx-16">
+            <!-- Principal -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover" data-aos="fade-up">
+                <div class="relative h-72 overflow-hidden">
+                    <img src="./images/principal.jpeg" alt="Principal" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold">Mr. Sanjiv Kumar Jha</h3>
+                            <p class="text-blue-300 font-medium">Principal</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vice-principal -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="./images/vice.jpeg" alt="Vice-Principal" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold">Mr. Somnath Dey</h3>
+                            <p class="text-blue-300 font-medium">Vice Principal</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Director -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="./images/direc.jpeg" alt="Vice Principal" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold">Mr. Shuvam Rawat Chaurasiya</h3>
+                            <p class="text-blue-300 font-medium">Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="py-20 bg-blue-800 text-white parallax" style="background-image: url('./images/026bf747.jfif');">
+        <div class="bg-blue-900 bg-opacity-70 py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">What Our Community Says</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm border border-blue-200 border-opacity-20">
+                        <div class="flex items-center mb-4">
+                            <img src="./images/808a98c0-5b9f-4026-8af8-dcc88c3e4961.jfif" alt="Parent" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold">Preeti Thapa</h4>
+                                <p class="text-blue-200 text-sm">Parent of Grade 7 Student</p>
+                            </div>
+                        </div>
+                        <p class="italic">"The holistic approach to education at Chandani Secondary School has transformed my daughter. She's not just excelling academically but has developed remarkable leadership skills and social awareness."</p>
+                        <div class="flex mt-4 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm border border-blue-200 border-opacity-20">
+                        <div class="flex items-center mb-4">
+                            <img src="./images/alumni.jpg" alt="Alumni" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold">Chirag Byanjankar</h4>
+                                <p class="text-blue-200 text-sm">Alumni, Class of 2014</p>
+                            </div>
+                        </div>
+                        <p class="italic">"The foundation I received here prepared me not just for university at the US, but for life. The teachers genuinely cared about our growth beyond textbooks."</p>
+                        <div class="flex mt-4 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm border border-blue-200 border-opacity-20">
+                        <div class="flex items-center mb-4">
+                            <img src="https://via.placeholder.com/60" alt="Teacher" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold">John Joshi</h4>
+                                <p class="text-blue-200 text-sm">Computer Teacher (2010-Present)</p>
+                            </div>
+                        </div>
+                        <p class="italic">"Teaching here for over a decade, I've witnessed how the school's philosophy creates an environment where both students and teachers thrive and innovate together."</p>
+                        <div class="flex mt-4 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Ready to Join Our Community?</h2>
+            <p class="text-xl max-w-3xl mx-auto mb-8 opacity-90" data-aos="fade-up" data-aos-delay="100">Discover how Chandani Secondary School can help your child reach their full potential.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="index.html#admissions" class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-4 px-8 rounded-full transition duration-300 transform hover:-translate-y-1 hover:shadow-lg">Admissions Process</a>
+                <a href="contact.html" class="bg-transparent hover:bg-white/10 text-white font-bold py-4 px-8 rounded-full border-2 border-white transition duration-300 transform hover:-translate-y-1 hover:shadow-lg">Schedule a Visit</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="./images/logo.jpg" alt="School Logo" class="h-24 w-25 object-cover rounded-full mr-3 border-2 border-blue-500 align-items:center;">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Chandani Secondary School</h3>
+                        <p class="text-xs text-gray-400">Lalitpur, Nepal</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">About Us</h4>
+                    <p class="text-gray-400 mb-4 text-sm">
+                        Providing quality education in Nepal since 1989. Committed to academic excellence and holistic development of students.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=100064005759165" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <address class="text-gray-400 not-italic text-sm">
+                        <div class="flex items-start mb-3">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <a href="https://www.google.com/maps/place/Chandani+Secondary+English+School/@27.6777437,85.326173,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb19c6b663dd47:0xaf78b3293d760622!8m2!3d27.677739!4d85.3287479!16s%2Fg%2F11b6rxsnj4?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                                <span>Shankhamul, Lalitpur, Nepal</span>
+                            </a>
+                        </div>
+                        <div class="flex items-start mb-3">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-blue-400"></i>
+                            <a href="tel:+977-1-5912488">
+                                <span>+977-1-5912488</span>
+                            </a>
+                        </div>
+                        <div class="flex items-start mb-3">
+                            <i class="fas fa-envelope mt-1 mr-3 text-blue-400"></i>
+                            <a href="mailto:info@chandani.edu.np">
+                                <span>info@chandani.edu.np</span>
+                            </a>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-3 text-blue-400"></i>
+                            <span>Sunday-Friday: 9:00 AM - 4:00 PM</span>
+                        </div>  
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Chandani Secondary School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-5 right-5 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg hidden transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 120
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.innerHTML = mobileMenu.classList.contains('hidden') ? 
+                '<i class="fas fa-bars text-2xl"></i>' : 
+                '<i class="fas fa-times text-2xl"></i>';
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            // Alert if content exceeds viewport
+            if (document.documentElement.scrollWidth > window.innerWidth) {
+                console.warn('Content exceeds viewport width!');
+                document.body.style.overflowX = 'hidden';
+            }
+            // Force mobile viewport
+            if (window.innerWidth <= 768) {
+                document.querySelector('meta[name="viewport"]')
+                .setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0');
+            }
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

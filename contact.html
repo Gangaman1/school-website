@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Chandani Secondary English School</title>
+    <link rel="icon" href="./images/logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+       :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
+         body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            color: #334155;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-container {
+            height: 100%;
+            min-height: 300px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            bottom: -10px;
+            left: 25%;
+            border-radius: 2px;
+        }
+
+        .faq-content {
+            display: none; /* Start hidden */
+            transition: all 0.3s ease;
+        }
+
+        .faq-content.active {
+            display: block; /* Show when active */
+        }
+
+        .faq-toggle i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-toggle.active i {
+            transform: rotate(180deg);
+        }
+         @media (max-width: 768px) {
+            /* Add padding to containers */
+            .container.mx-auto {
+                max-width: 100vw !important;
+                padding-left: 1rem;  /* 16px padding on mobile */
+                padding-right: 1rem;
+            }
+            
+            /* Full-width sections but with side padding */
+            .container, section, footer {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-sm border-b border-gray-100">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="flex items-center group">
+                    <img src="./images/logo.jpg" alt="School Logo" class="h-12 w-12 object-cover rounded-full mr-3 border-2 border-blue-500 transition-transform duration-300 group-hover:scale-105">
+                    <div>
+                        <h1 class="text-xl font-bold text-blue-800 group-hover:text-blue-600 transition-colors">Chandani Secondary School</h1>
+                        <p class="text-xs text-gray-600 group-hover:text-gray-800 transition-colors">Lalitpur, Nepal</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="hidden lg:flex space-x-6 items-center">
+                <a href="index.html" class="relative text-gray-600 hover:text-blue-600 transition-colors px-3 py-2 group">
+                    <span>Home</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="about.html" class="relative text-gray-600 hover:text-blue-600 transition-colors px-3 py-2 group">
+                    <span>About</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="gallery.html" class="relative text-gray-600 hover:text-blue-600 transition-colors px-3 py-2 group">
+                    <span>Gallery</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="relative text-blue-800 hover:text-blue-600 transition-colors px-3 py-2 group">
+                    <span>Contact</span>
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600"></span>
+                </a>
+                <a href="index.html#admissions" class="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    Admissions
+                </a>
+            </div>
+            
+            <button class="lg:hidden text-gray-600 focus:outline-none" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-white/95 w-full py-4 px-6 shadow-lg backdrop-blur-sm" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="block py-2 text-gray-600 border-b border-gray-100 hover:text-blue-600 hover:bg-blue-50 px-2 rounded transition-colors">Home</a>
+                <a href="about.html" class="block py-2 text-gray-600 border-b border-gray-100 hover:text-blue-600 hover:bg-blue-50 px-2 rounded transition-colors">About</a>
+                <a href="gallery.html" class="block py-2 text-gray-600 border-b border-gray-100 hover:text-blue-600 hover:bg-blue-50 px-2 rounded transition-colors">Gallery</a>
+                <a href="#" class="block py-2 text-blue-800 border-b border-gray-100 hover:bg-blue-50 px-2 rounded transition-colors">Contact</a>
+                <a href="index.html#admissions" class="block bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center font-medium py-3 px-6 rounded-full mt-2 shadow-md hover:shadow-lg transition-all">
+                    Admissions
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-blue-800 overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <img src="./images/499685212.jpg" alt="School Tour" class="w-full h-full object-cover">
+        <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+            <div class="text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-down">
+                    <span class="gradient-text">Contact</span> Us
+                </h1>
+                <p class="text-lg display: inline-block padding-left: 100%" data-aos="fade-down" data-aos-delay="100">We'd love to hear from you</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Info Section -->
+    <section class="py-12 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4 text-blue-800 section-title">Get <span class="gradient-text"> in Touch</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Reach out to us through any of the following channels</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+                <!-- Contact Card 1 - Location -->
+                <div class="contact-card bg-gray-50 rounded-xl p-6 text-center shadow-sm hover:shadow-md">
+                    <div class="bg-blue-100 text-blue-800 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-map-marker-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Our Location</h3>
+                    <p class="text-gray-600 mb-4">Shankhamul, Lalitpur<br>Nepal</p>
+                    <a href="https://www.google.com/maps/place/Chandani+Secondary+English+School/@27.6780672,85.3273626,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb19c6b663dd47:0xaf78b3293d760622!8m2!3d27.6780625!4d85.3299375!16s%2Fg%2F11b6rxsnj4?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-blue-600 font-medium inline-flex items-center">
+                        View on Map <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Contact Card 2 - Phone -->
+                <div class="contact-card bg-gray-50 rounded-xl p-6 text-center shadow-sm hover:shadow-md">
+                    <div class="bg-green-100 text-green-800 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-phone-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Phone Numbers</h3>
+                    <p class="text-gray-600 mb-2">
+                        <span class="font-medium">Administration:</span> +977-1-5912488
+                    </p>
+                    <a href="tel:+97715915488" class="text-blue-600 font-medium inline-flex items-center">
+                        Call Now <i class="fas fa-phone ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Contact Card 3 - Email -->
+                <div class="contact-card bg-gray-50 rounded-xl p-6 text-center shadow-sm hover:shadow-md">
+                    <div class="bg-purple-100 text-purple-800 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Email Address</h3>
+                    <p class="text-gray-600 mb-4">
+                        <span class="font-medium">Admissions:</span> info@chandani.edu.np
+                    </p>
+                    <a href="mailto:info@chandani.edu.np" class="text-blue-600 font-medium inline-flex items-center">
+                        Email Us <i class="fas fa-envelope ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map Section -->
+    <section class="py-12" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4 section-title">Find <span class="gradient-text"> Us</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Visit our campus located at the edge of Shankhamul, Lalitpur</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" data-aos="zoom-in" data-aos-delay="100">
+                <!-- Map -->
+                <div class="map-container">
+                    <!-- Embedded Google Map -->
+                    <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDmhzJlCpBeHYNBaWEAsUKrgVwSgqqFel4&q=Chandani+Secondary+English+School,Nepal" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                
+                <!-- Transport Info -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 flex items-center">
+                            <i class="fas fa-bus text-blue-600 mr-2"></i> Public Transport Access
+                        </h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs mt-2 mr-2 text-blue-500"></i>
+                                <span>Local buses to Shankhamul stop at Shankhamul Bridge (5 mins walk)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs mt-2 mr-2 text-blue-500"></i>
+                                <span>Microbuses from Ratna Park terminate at Shankhamul Bus Stop</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs mt-2 mr-2 text-blue-500"></i>
+                                <span>Taxis and ride-sharing services available across Lalitpur</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 flex items-center">
+                            <i class="fas fa-car text-blue-600 mr-2"></i> Parking Information
+                        </h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs mt-2 mr-2 text-blue-500"></i>
+                                <span>Limited parking available on campus for visitors</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs mt-2 mr-2 text-blue-500"></i>
+                                <span>Paid parking available at Kick Futsal Parking Lot (1 min walk)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                        <h3 class="text-lg font-bold text-blue-800 mb-2 flex items-center">
+                            <i class="fas fa-info-circle text-blue-600 mr-2"></i> Visiting Guidelines
+                        </h3>
+                        <p class="text-gray-700 mb-2">For the safety and security of our students, all visitors must:</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Register at the security gate</li>
+                            <li>Wear the provided visitor badge at all times</li>
+                            <li>Follow all school policies while on campus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="py-12 bg-white" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4 section-title">Frequently<span class="gradient-text"> Asked Questions</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Answers to common questions we receive</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4" data-aos="zoom-in-down" data-aos-delay="200">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-medium text-gray-800 bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <span>What are your school hours?</span>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 py-4 hidden">
+                        <p class="text-gray-600">
+                            Our regular school hours are Sunday to Thursday from 9:00 AM to 3:30 PM. On Fridays, 
+                            school ends at 1:00 PM for religious observances. The administrative office is open 
+                            Sunday to Thursday from 9:00 AM to 4:00 PM and on Fridays from 9:00 AM to 1:00 PM.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-medium text-gray-800 bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <span>How can I schedule a school tour?</span>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 py-4 hidden">
+                        <p class="text-gray-600">
+                            We welcome prospective families to visit our campus. Tours are conducted Monday to Thursday
+                            between 10:00 AM and 2:00 PM. Please call our admission office at +977-1-5912488 or
+                            email info@chandani.edu.np to schedule your visit. Tours typically last about an hour
+                            and include visits to classrooms, facilities, and a meeting with admission staff.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-medium text-gray-800 bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <span>What documentation is required for admission?</span>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 py-4 hidden">
+                        <p class="text-gray-600">
+                            Admission requires the following documents: completed application form, two recent passport-sized photographs,
+                            birth certificate (original and photocopy), previous school report cards, transfer certificate (if applicable),
+                            character certificate from previous school, and citizenship copies of parents/guardians. Additional documents
+                            may be required for specific circumstances.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-medium text-gray-800 bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <span>What is your fee structure?</span>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 py-4 hidden">
+                        <p class="text-gray-600">
+                            Our fee structure varies by grade level and includes tuition fee, development fee, and other applicable charges. 
+                            We offer discounts for siblings and early payment. For detailed information about the current academic year's 
+                            fees, please contact our accounts department at info@chandani.edu.np or call +977-1-5912488.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-medium text-gray-800 bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <span>Do you offer scholarships or financial aid?</span>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 py-4 hidden">
+                        <p class="text-gray-600">
+                            Yes, we offer merit-based scholarships for outstanding students. Financial assistance is also available
+                            for families with demonstrated need. Applications for financial aid are accepted from April 1 to May 15
+                            each year. All financial aid decisions are made confidentially by our scholarship committee. Please email
+                            info@chandani.edu.np for application details and requirements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <p class="text-gray-600 mb-4">Still have questions?</p>
+                <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg">
+                    Contact Us <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="./images/logo.jpg" alt="School Logo" class="h-24 w-25 object-cover rounded-full mr-3 border-2 border-blue-500 align-items:center;">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Chandani Secondary School</h3>
+                        <p class="text-xs text-gray-400">Lalitpur, Nepal</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">About Us</h4>
+                    <p class="text-gray-400 mb-4 text-sm">
+                        Providing quality education in Nepal since 1989. Committed to academic excellence and holistic development of students.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=100064005759165" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <address class="text-gray-400 not-italic text-sm">
+                        <div class="flex items-start mb-3">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <a href="https://www.google.com/maps/place/Chandani+Secondary+English+School/@27.6777437,85.326173,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb19c6b663dd47:0xaf78b3293d760622!8m2!3d27.677739!4d85.3287479!16s%2Fg%2F11b6rxsnj4?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                                <span>Shankhamul, Lalitpur, Nepal</span>
+                            </a>
+                        </div>
+                        <div class="flex items-start mb-3">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-blue-400"></i>
+                            <a href="tel:+977-1-5912488">
+                                <span>+977-1-5912488</span>
+                            </a>
+                        </div>
+                        <div class="flex items-start mb-3">
+                            <i class="fas fa-envelope mt-1 mr-3 text-blue-400"></i>
+                            <a href="mailto:info@chandani.edu.np">
+                                <span>info@chandani.edu.np</span>
+                            </a>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-3 text-blue-400"></i>
+                            <span>Sunday-Friday: 9:00 AM - 4:00 PM</span>
+                        </div>  
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Chandani Secondary School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-5 right-5 bg-blue-600 text-white p-4 rounded-full shadow-lg hidden z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 120
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    // Toggle the active state on the button
+                    this.classList.toggle('active');
+                    
+                    // Get the associated content
+                    const content = this.nextElementSibling;
+                    
+                    // Toggle the content visibility
+                    content.classList.toggle('active');
+                    
+                    // Close other open items (optional)
+                    faqToggles.forEach(otherToggle => {
+                        if (otherToggle !== this) {
+                            otherToggle.classList.remove('active');
+                            otherToggle.nextElementSibling.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            // Alert if content exceeds viewport
+            if (document.documentElement.scrollWidth > window.innerWidth) {
+                console.warn('Content exceeds viewport width!');
+                document.body.style.overflowX = 'hidden';
+            }
+            // Force mobile viewport
+            if (window.innerWidth <= 768) {
+                document.querySelector('meta[name="viewport"]')
+                .setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0');
+            }
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
