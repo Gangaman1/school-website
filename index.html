@@ -1,1102 +1,2398 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=n">
-    <title>Chandani Secondary English School - Lalitpur, Nepal</title>
-    <link rel="icon" href="./images/logo.jpg">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
-        
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #f59e0b;
-            --dark: #1e293b;
-            --light: #f8fafc;
+<!DOCTYPE html> 
+
+<html lang="en"> 
+    
+<head> 
+    
+<meta charset="UTF-8"> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=n"> 
+
+<title>Chandani Secondary English School - Lalitpur, Nepal</title> 
+
+<link rel="icon" href="./images/logo.jpg"> 
+
+<script src="https://cdn.tailwindcss.com"></script> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script> 
+
+<script src="https://unpkg.com/feather-icons"></script>
+
+<style> 
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap'); 
+
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap'); 
+
+     
+
+    :root { 
+
+        --primary: #2563eb; 
+
+        --primary-dark: #1d4ed8; 
+
+        --secondary: #f59e0b; 
+
+        --dark: #1e293b; 
+
+        --light: #f8fafc; 
+
+    } 
+
+     
+
+    body, html { 
+
+        font-family: 'Poppins', 'Hindi Siliguri', sans-serif; 
+
+        scroll-behavior: smooth; 
+
+        color: #334155; 
+
+        width: 100%; 
+
+        max-width: 100%; 
+
+        margin: 0; 
+
+        padding: 0; 
+
+    } 
+
+     
+
+    h1, h2, h3, h4, h5, h6 { 
+
+        font-family: 'Montserrat', sans-serif; 
+
+    } 
+
+     
+
+    .gradient-text { 
+
+        background: linear-gradient(90deg, var(--primary), var(--secondary)); 
+
+        -webkit-background-clip: text; 
+
+        background-clip: text; 
+
+        color: transparent; 
+
+    } 
+
+     
+
+    .hero-section { 
+
+        position: relative; 
+
+        height: 80vh; 
+
+        overflow: hidden; 
+
+    } 
+
+     
+
+    .hero-slideshow { 
+
+        position: absolute; 
+
+        top: 0; 
+
+        left: 0; 
+
+        width: 100%; 
+
+        height: 100%; 
+
+        z-index: 1; 
+
+    } 
+
+     
+
+    .hero-slide { 
+
+        position: absolute; 
+
+        width: 100%; 
+
+        height: 100%; 
+
+        background-size: cover; 
+
+        background-position: center; 
+
+        opacity: 0; 
+
+        transition: opacity 1.5s ease-in-out; 
+
+    } 
+
+     
+
+    .hero-slide.active { 
+
+        opacity: 1; 
+
+    } 
+
+     
+
+    .hero-content { 
+
+        position: relative; 
+
+        z-index: 2; 
+
+        height: 100%; 
+
+        display: flex; 
+
+        flex-direction: column; 
+
+        justify-content: center; 
+
+        align-items: center; 
+
+        text-align: center; 
+
+        color: white; 
+
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)); 
+
+    } 
+
+     
+
+     .counter-item { 
+
+        transition: all 0.3s ease; 
+
+    } 
+
+     
+
+    .counter-item:hover { 
+
+        transform: translateY(-5px); 
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+
+    } 
+
+     
+
+    .section-title { 
+
+        position: relative; 
+
+        display: inline-block; 
+
+    } 
+
+     
+
+    .section-title:after { 
+
+        content: ''; 
+
+        position: absolute; 
+
+        width: 50%; 
+
+        height: 4px; 
+
+        background: linear-gradient(90deg, var(--primary), var(--secondary)); 
+
+        bottom: -10px; 
+
+        left: 25%; 
+
+        border-radius: 2px; 
+
+    } 
+
+     
+
+    .my-paragraph { 
+
+        text-align: justify; 
+
+    } 
+
+
+
+    .card-hover { 
+
+        transition: all 0.3s ease; 
+
+    } 
+
+     
+
+    .card-hover:hover { 
+
+        transform: translateY(-8px); 
+
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+
+    } 
+
+     
+
+    .news-ticker { 
+
+        background: linear-gradient(90deg, #ef4444, #dc2626); 
+
+    } 
+
+     
+
+    .marquee-container { 
+
+        overflow: hidden; 
+
+        white-space: nowrap; 
+
+    } 
+
+     
+
+    .marquee-content { 
+
+        display: inline-block; 
+
+        padding-left: 100%; 
+
+        animation: marquee 40s linear infinite; 
+
+    } 
+
+
+
+    @keyframes marquee { 
+
+        0% { transform: translateX(0); } 
+
+        100% { transform: translateX(-100%); } 
+
+    } 
+
+     
+
+     .nepali-text { 
+
+        font-family: 'Hind Siliguri', sans-serif; 
+
+        line-height: 1.8; 
+
+    } 
+
+     
+
+    .testimonial-card { 
+
+        transition: all 0.3s ease; 
+
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+
+    } 
+
+     
+
+    .testimonial-card:hover { 
+
+        transform: translateY(-5px); 
+
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); 
+
+    } 
+
+     
+
+    .quote-icon { 
+
+        color: #f59e0b; 
+
+        opacity: 0.7; 
+
+    } 
+
+     
+
+    .section-title { 
+
+        position: relative; 
+
+        display: inline-block; 
+
+    } 
+
+     
+
+    .section-title:after { 
+
+        content: ''; 
+
+        position: absolute; 
+
+        width: 50%; 
+
+        height: 4px; 
+
+        background: linear-gradient(90deg, var(--primary), var(--secondary)); 
+
+        bottom: -10px; 
+
+        left: 25%; 
+
+        border-radius: 2px; 
+
+    } 
+
+     
+
+    .admission-process li { 
+
+        position: relative; 
+
+        padding-left: 2.5rem; 
+
+        margin-bottom: 1rem; 
+
+    } 
+
+     
+
+    .admission-process li::before { 
+
+        content: ""; 
+
+        position: absolute; 
+
+        left: 0; 
+
+        top: 0; 
+
+        width: 2rem; 
+
+        height: 2rem; 
+
+        background-color: var(--primary); 
+
+        border-radius: 50%; 
+
+        display: flex; 
+
+        align-items: center; 
+
+        justify-content: center; 
+
+        color: white; 
+
+        font-weight: bold; 
+
+    } 
+
+     .popup-overlay { 
+
+        position: fixed; 
+
+        top: 0; 
+
+        left: 0; 
+
+        width: 100%; 
+
+        height: 100%; 
+
+        background-color: rgba(0, 0, 0, 0.9); 
+
+        display: flex; 
+
+        justify-content: center; 
+
+        align-items: center; 
+
+        z-index: 9999; 
+
+        transition: opacity 0.3s ease; 
+
+    } 
+
+    .popup-content { 
+
+        position: relative; 
+
+        width: 90%; 
+
+        max-width: 1200px; 
+
+        height: auto; 
+
+        max-height: 90vh; 
+
+        display: flex; 
+
+        justify-content: center; 
+
+        align-items: center; 
+
+        animation: fadeIn 0.5s ease; 
+
+    } 
+
+    .popup-image { 
+
+        width: 100%; 
+
+        height: auto; 
+
+        max-height: 90vh; 
+
+        object-fit: contain; 
+
+        border-radius: 12px; 
+
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3); 
+
+    } 
+
+    .close-btn { 
+
+        position: absolute; 
+
+        top: -20px; 
+
+        right: -20px; 
+
+        background: white; 
+
+        border-radius: 50%; 
+
+        width: 50px; 
+
+        height: 50px; 
+
+        display: flex; 
+
+        justify-content: center; 
+
+        align-items: center; 
+
+        cursor: pointer; 
+
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+
+        transition: all 0.2s ease; 
+
+        z-index: 10000; 
+
+    } 
+
+    .close-btn:hover { 
+
+        transform: scale(1.1); 
+
+        background: #f8fafc; 
+
+    }
+
+     @keyframes fadeIn { 
+
+        from { opacity: 0; transform: scale(0.95); } 
+
+        to { opacity: 1; transform: scale(1); } 
+
+    } 
+
+    /* Mobile-responsive padding */ 
+
+    @media (max-width: 768px) { 
+
+        /* Add padding to containers */ 
+
+        .container.mx-auto { 
+
+            max-width: 100vw !important; 
+
+            padding-left: 1rem;  /* 16px padding on mobile */ 
+
+            padding-right: 1rem; 
+
+        } 
+
+         
+
+        /* Full-width sections but with side padding */ 
+
+        .contaoner, section, .hero-section, footer { 
+
+            width: 100%; 
+
+            max-width: 100%; 
+
+            overflow-x: hidden; 
+
+        } 
+
+         
+
+        /* Slightly reduce side margins for grids/galleries */ 
+
+        .grid.grid-cols-2 { 
+
+            gap: 0.5rem;  /* Smaller gap on mobile */ 
+
+        } 
+
+         
+
+        /* Ensure text/content doesn't touch edges */ 
+
+        .text-center, .hero-content { 
+
+            padding-left: 1rem; 
+
+            padding-right: 1rem; 
+
         }
         
-        body, html {
-            font-family: 'Poppins', 'Hindi Siliguri', sans-serif;
-            scroll-behavior: smooth;
-            color: #334155;
-            width: 100%;
-            max-width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .hero-section {
-            position: relative;
-            height: 80vh;
-            overflow: hidden;
-        }
-        
-        .hero-slideshow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        
-        .hero-slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-        }
-        
-        .hero-slide.active {
-            opacity: 1;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
-        }
-        
-         .counter-item {
-            transition: all 0.3s ease;
-        }
-        
-        .counter-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .section-title {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            bottom: -10px;
-            left: 25%;
-            border-radius: 2px;
-        }
-        
-        .my-paragraph {
-            text-align: justify;
+        .popup-content { 
+
+            width: 95%; 
+
         }
 
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .news-ticker {
-            background: linear-gradient(90deg, #ef4444, #dc2626);
-        }
-        
-        .marquee-container {
-            overflow: hidden;
-            white-space: nowrap;
-        }
-        
-        .marquee-content {
-            display: inline-block;
-            padding-left: 100%;
-            animation: marquee 40s linear infinite;
-        }
+        .close-btn { 
 
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
-        
-         .nepali-text {
-            font-family: 'Hind Siliguri', sans-serif;
-            line-height: 1.8;
-        }
-        
-        .testimonial-card {
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .quote-icon {
-            color: #f59e0b;
-            opacity: 0.7;
-        }
-        
-        .section-title {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            bottom: -10px;
-            left: 25%;
-            border-radius: 2px;
-        }
-        
-        .admission-process li {
-            position: relative;
-            padding-left: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .admission-process li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 2rem;
-            height: 2rem;
-            background-color: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
+            top: -15px; 
 
-        /* Mobile-responsive padding */
-        @media (max-width: 768px) {
-            /* Add padding to containers */
-            .container.mx-auto {
-                max-width: 100vw !important;
-                padding-left: 1rem;  /* 16px padding on mobile */
-                padding-right: 1rem;
-            }
-            
-            /* Full-width sections but with side padding */
-            .contaoner, section, .hero-section, footer {
-                width: 100%;
-                max-width: 100%;
-                overflow-x: hidden;
-            }
-            
-            /* Slightly reduce side margins for grids/galleries */
-            .grid.grid-cols-2 {
-                gap: 0.5rem;  /* Smaller gap on mobile */
-            }
-            
-            /* Ensure text/content doesn't touch edges */
-            .text-center, .hero-content {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
+            right: -15px; 
+
+            width: 40px; 
+
+            height: 40px; 
+
         }
-        
-        .admission-process li:nth-child(1)::before { content: "1"; }
-        .admission-process li:nth-child(2)::before { content: "2"; }
-        .admission-process li:nth-child(3)::before { content: "3"; }
-        .admission-process li:nth-child(4)::before { content: "4"; }
-    </style>
-</head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-sm border-b border-gray-100">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <a href="index.html" class="flex items-center group">
-                    <img src="./images/logo.jpg" alt="School Logo" class="h-12 w-12 object-cover rounded-full mr-3 border-2 border-blue-500 transition-transform duration-300 group-hover:scale-105">
-                    <div>
-                        <h1 class="text-xl font-bold text-blue-800 group-hover:text-blue-600 transition-colors">Chandani Secondary School</h1>
-                        <p class="text-xs text-gray-600 group-hover:text-gray-800 transition-colors">Lalitpur, Nepal</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="hidden lg:flex space-x-6 items-center">
-                <a href="#" class="relative text-blue-800 hover:text-blue-600 transition-colors px-3 py-2 group">
-                    <span>Home</span>
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600"></span>
-                </a>
-                <a href="about.html" class="relative text-gray-600 hover:text-blue-600 transition-colors px-3 py-2 group">
-                    <span>About</span>
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="gallery.html" class="relative text-gray-600 hover:text-blue-600 transition-colors px-3 py-2 group">
-                    <span>Gallery</span>
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="contact.html" class="relative text-gray-600 hover:text-blue-600 transition-colors px-3 py-2 group">
-                    <span>Contact</span>
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="index.html#admissions" class="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                    Admissions
-                </a>
-            </div>
-            
-            <button class="lg:hidden text-gray-600 focus:outline-none" id="mobile-menu-button">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div class="lg:hidden hidden bg-white/95 w-full py-4 px-6 shadow-lg backdrop-blur-sm" id="mobile-menu">
-            <div class="flex flex-col space-y-4">
-                <a href="#" class="block py-2 text-blue-800 border-b border-gray-100 hover:text-blue-600 hover:bg-blue-50 px-2 rounded transition-colors">Home</a>
-                <a href="about.html" class="block py-2 text-gray-600 border-b border-gray-100 hover:text-blue-600 hover:bg-blue-50 px-2 rounded transition-colors">About</a>
-                <a href="gallery.html" class="block py-2 text-gray-600 border-b border-gray-100 hover:text-blue-600 hover:bg-blue-50 px-2 rounded transition-colors">Gallery</a>
-                <a href="contact.html" class="block py-2 text-gray-600 border-b border-gray-100 hover:bg-blue-50 px-2 rounded transition-colors">Contact</a>
-                <a href="index.html#admissions" class="block bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center font-medium py-3 px-6 rounded-full mt-2 shadow-md hover:shadow-lg transition-all">
-                    Admissions
-                </a>
-            </div>
-        </div>
-    </nav>
+    }
 
-    <!-- Breaking News Ticker -->
-    <div class="news-ticker text-white py-3 px-4">
-        <div class="container mx-auto flex items-center">
-            <a href="gallery.html" class="flex-shrink-0">
-                <span class="font-bold mr-4 bg-white text-red-600 px-3 py-1 rounded-full text-sm flex items-center">
-                    <i class="fas fa-bolt mr-2"></i> BREAKING
-                </span>
-            </a>
-            <div class="marquee-container w-full">
-                <div class="marquee-content">
-                     <span class="mr-8"> <span class="mr-8"> आदरणीय अभिभावक ज्यूहरू,  Gen-Z आन्दोलनमा शाहदत प्राप्त सहिदहरु प्रति श्रध्दाञ्ली अर्पण गर्दै मिति २०८२ साल असोज १ गते यस विडायालय बन्द हुने व्यहोरो अनुरोध गर्दछु ।</span>
-                     <span class="mr-8"> <span class="mr-8"> भोलि हुने परीक्षा मिति ०८२ असोज ४ गते हुने र परीक्षामा सहभागि हुने बाबुनानीहरुको प्रवेशपत्र वितरणकोलागि भोलि मिति ०८२ असोज 1 गते दिनको २ बजे सम्म लेखाशाखा खुल्ला हुने पनि सुचित गर्दछु ।</span>    
-                    <span class="mr-8">Chandani School incorportes School Management App Pathshala</span>
-            </div>
-            </div>
-        </div>
-    </div>
+    @media (max-width: 480px) { 
 
-    <!-- Hero Section with Slideshow Background -->
-    <section class="hero-section">
-        <div class="hero-slideshow">
-            <div class="hero-slide active" style="background-image: url(./images/buildingfront.jpeg);"></div>
-            <div class="hero-slide" style="background-image: url(./images/flags.jpeg);"></div>
-            <div class="hero-slide" style="background-image: url(./images/504619291_1140145458128969_8238071332087389116_n.jpg);"></div>
-            <div class="hero-slide" style="background-image: url(./images/compound.jpeg);"></div>
-        </div>
-        
-        <div class="hero-content">
-            <div class="container mx-auto px-4 text-center">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" data-aos="fade-down">
-                    <span class="gradient-text">Quality Education</span> in Nepal
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200" data-aos="fade-down" data-aos-delay="100">
-                    Nurturing Future Leaders Through Holistic Education Since 1989
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#admissions" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 flex items-center justify-center" data-aos="zoom-in" data-aos-delay="200">
-                        <i class="fas fa-user-graduate mr-2"></i> Apply Now
-                    </a>
-                    <a href="#about" class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-3 px-8 rounded-full transition duration-300 flex items-center justify-center" data-aos="zoom-in" data-aos-delay="300">
-                        <i class="fas fa-info-circle mr-2"></i> Learn More
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white text-3xl animate-bounce" data-aos="fade-up" data-aos-delay="500">
-            <i class="fas fa-chevron-down"></i>
-        </a>
-    </section>
-    
-      <!-- Quick Facts -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-4 text-blue-800 section-title">Chandani<span class="gradient-text text-4xl font-bold"> at a Glance</span></h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 line-height: 1.5 p-4">
-                <div class="counter-item bg-blue-50 p-6 rounded-lg text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2" id="years-counter">0</div>
-                    <div class="text-gray-600">Years of Excellence</div>
-                </div>
-                <div class="counter-item bg-green-50 p-6 rounded-lg text-center">
-                    <div class="text-4xl font-bold text-green-600 mb-2" id="students-counter">0</div>
-                    <div class="text-gray-600">Current Students</div>
-                </div>
-                <div class="counter-item bg-yellow-50 p-6 rounded-lg text-center">
-                    <div class="text-4xl font-bold text-yellow-600 mb-2" id="teachers-counter">0</div>
-                    <div class="text-gray-600">Qualified Teachers</div>
-                </div>
-                <div class="counter-item bg-purple-50 p-6 rounded-lg text-center">
-                    <div class="text-4xl font-bold text-purple-600 mb-2" id="alumni-counter">0</div>
-                    <div class="text-gray-600">Successful Alumni</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800 section-title" data-aos="fade-up">
-                    About <span class="gradient-text">Our School</span>
-                </h2>
-                <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">
-                    Committed to academic excellence and holistic development in the heart of Lalitpur
-                </p>
-            </div>
-            
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2" data-aos="fade-right">
-                    <div class="relative rounded-xl overflow-hidden shadow-xl hover:scale-105 transition duration-300">
-                        <img src="./images/stages1.jpeg" alt="School Building" class="w-full h-auto object-cover transition-transform">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-6">
-                            <div>  
-                                <h3 class="text-white text-xl font-bold">Our School</h3>
-                                <p class="text-gray-200">A nurturing environment for learning and growth</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/2" data-aos="fade-left">
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-                        Welcome to Chandani English School
-                    </h3>
-                    <p class="text-gray-600 mb-4 text-lg my-paragraph">
-                        Established in 1989, Chandani English School is one of the premier educational institutions in Lalitpur, Nepal. We are committed to providing quality education that combines academic excellence with moral values and life skills.
-                    </p>
-                    <p class="text-gray-600 mb-6 text-lg my-paragraph">
-                        Our mission is to nurture young minds to become responsible global citizens while preserving their Nepali identity and cultural heritage through innovative teaching methodologies and a supportive learning environment.
-                    </p>
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                        <div class="flex items-start" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="bg-blue-100 p-2 rounded-full mr-3">
-                                <i class="fas fa-check-circle text-blue-600"></i>
-                            </div>
-                            <span class="text-gray-700 font-medium">NEB Curriculum</span>
-                        </div>
-                        <div class="flex items-start" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="bg-blue-100 p-2 rounded-full mr-3">
-                                <i class="fas fa-check-circle text-blue-600"></i>
-                            </div>
-                            <span class="text-gray-700 font-medium">Modern Facilities</span>
-                        </div>
-                        <div class="flex items-start" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="bg-blue-100 p-2 rounded-full mr-3">
-                                <i class="fas fa-check-circle text-blue-600"></i>
-                            </div>
-                            <span class="text-gray-700 font-medium">Experienced Faculty</span>
-                        </div>
-                        <div class="flex items-start" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="bg-blue-100 p-2 rounded-full mr-3">
-                                <i class="fas fa-check-circle text-blue-600"></i>
-                            </div>
-                            <span class="text-gray-700 font-medium">Holistic Development</span>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="about.html" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full transition duration-300" data-aos="zoom-in">
-                            Read More <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                        <a href="#" class="inline-flex items-center justify-center border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium py-3 px-6 rounded-full transition duration-300" data-aos="zoom-in" data-aos-delay="100">
-                            <i class="fas fa-play-circle mr-2"></i> Watch Video
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Academics Section -->
-    <section id="academics" class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800 section-title" data-aos="fade-up">
-                    Our <span class="gradient-text">Academic Programs</span>
-                </h2>
-                <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">
-                    Comprehensive educational programs from early childhood to higher secondary education
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-md card-hover" data-aos="fade-up">
-                    <div class="text-blue-600 text-5xl mb-6">
-                        <i class="fas fa-child"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Primary Level (Nursery-UKG)</h3>
-                    <p class="text-gray-600 mb-6 my-paragraph">
-                        Our primary program focuses on foundational learning with a blend of academics and creative activities to stimulate young minds.
-                    </p>
-                    <ul class="text-gray-600 space-y-3 mb-6">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                            <span>Interactive learning methods</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                            <span>Focus on literacy and numeracy</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                            <span>Creative arts integration</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-8 rounded-xl shadow-md card-hover" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-blue-600 text-5xl mb-6">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Lower Secondary (1-8)</h3>
-                    <p class="text-gray-600 mb-6 my-paragraph">
-                        Our lower secondary program builds on foundational knowledge while introducing specialized subjects and critical thinking skills.
-                    </p>
-                    <ul class="text-gray-600 space-y-3 mb-6">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                            <span>Subject specialization begins</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                            <span>Project-based learning</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                            <span>Critical thinking development</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-8 rounded-xl shadow-md card-hover" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-blue-600 text-5xl mb-6">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Secondary Level (9-10)</h3>
-                    <p class="text-gray-600 mb-6 my-paragraph">
-                        Our secondary program prepares students for SEE and higher education with rigorous academics and career guidance.
-                    </p>
-                    <ul class="text-gray-600 space-y-3 mb-6">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                            <span>Base for Distinct fields</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                            <span>Career counseling</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                            <span>Research and innovation focus</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Facilities Section -->
-    <section id="facilities" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800 section-title" data-aos="fade-up">
-                    Our <span class="gradient-text">Facilities</span>
-                </h2>
-                <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">
-                    State-of-the-art infrastructure to support learning and overall development
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md card-hover" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="relative overflow-hidden h-60">
-                        <img src="./images/c0c95cfd02be.jfif" alt="Sports" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6">
-                            <h3 class="text-xl font-bold text-white">Sports Complex</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600">
-                            Indoor and outdoor sports facilities including basketball, volleyball, badminton, table tennis, and a well-maintained playground.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md card-hover" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="relative overflow-hidden h-60">
-                        <img src="./images/computer.png" alt="Computer Lab" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6">
-                            <h3 class="text-xl font-bold text-white">Computer Lab</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600">
-                            Modern computer lab with high-speed internet, latest software, and one computer per student for digital literacy and coding classes.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md card-hover" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="relative overflow-hidden h-60">
-                        <img src="./images/canteen.jfif">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6">
-                            <h3 class="text-xl font-bold text-white">Cafeteria</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600">
-                            Spacious and hygienic cafeteria serving nutritious meals and snacks, with options for different dietary requirements.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800 section-title" data-aos="fade-up">
-                    School <span class="gradient-text">Gallery</span>
-                </h2>
-                <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">
-                    A glimpse into life at Chandani Secondary English School
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
-                <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in">
-                    <img src="./images/buildingfront.jpeg" alt="School Building" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="./images/462758848_7640886396014335_6405602682601477974_n.jpg" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="./images/c3b9dd12-8665-40bc-9d48-69fe7a4d1d43.jfif" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="./images/469594501_7953941844708787_973711556533685088_n.jpg" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="./images/56112f20-fe4c-4bfe-9bf1-4eb67c23b854.jfif" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="500">
-                    <img src="./images/499685212.jpg" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="600">
-                    <img src="./images/462892021_7640886372681004_7761318901610312949_n.jpg" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="700">
-                    <img src="./images/475419546_4010215299300179_6712551264027729784_n.jpg" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500">
-                </div>
-            </div>
-            
-            <div class="text-center mt-10" data-aos="fade-up">
-                <a href="gallery.html" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition duration-300">
-                    <i class="fas fa-images mr-2"></i> View More Photos
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- News & Events -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800 section-title" data-aos="fade-up">
-                    News & <span class="gradient-text">Events</span>
-                </h2>
-                <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">
-                    Stay updated with our latest happenings and announcements
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 card-hover" data-aos="fade-up">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="./images/499786022.jpg" alt="Event" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full">
-                            Event
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center text-sm text-gray-500 mb-3">
-                            <i class="far fa-calendar-alt mr-2"></i>
-                            <span>May 23, 2025</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Trip to Amusement Park</h3>
-                        <p class="text-gray-600 mb-4">
-                            Students' beating the warm weather with som fun and enthusiastic outdoor trip to the Whoopeeland. 
-                        </p>
-                        <a href="gallery.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
-                            Read More <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 card-hover" data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="./images/480276237_8318777608225207_2948882358926135473_n.jpg" alt="Event" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-red-600 text-white text-sm font-bold px-3 py-1 rounded-full">
-                            Announcement
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center text-sm text-gray-500 mb-3">
-                            <i class="far fa-calendar-alt mr-2"></i>
-                            <span>Sept 14, 2025</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Children's Day Celebration</h3>
-                        <p class="text-gray-600 mb-4">
-                            Students presented cultural programs to celebrate Children's day with fervor and pride.
-                        </p>
-                        <a href="gallery.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
-                            Read More <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 card-hover" data-aos="fade-up" data-aos-delay="200">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="./images/499761579_8962090940560534_6654580310796421238_n.jpg" alt="Event" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded-full">
-                            Achievement
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center text-sm text-gray-500 mb-3">
-                            <i class="far fa-calendar-alt mr-2"></i>
-                            <span>May 24, 2025</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Taekwando Competition</h3>
-                        <p class="text-gray-600 mb-4">
-                            Our students distinctive taekwando skills at the inter school taekwando championship, with several students winning district-level recognition.
-                        </p>
-                        <a href="gallery.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
-                            Read More <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-10" data-aos="fade-up">
-                <a href="gallery.html" class="inline-flex items-center justify-center border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium py-3 px-8 rounded-full transition duration-300">
-                    <i class="far fa-newspaper mr-2"></i> View All News
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Testimonials -->
-    <section class="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4 section-title" data-aos="fade-up">
-                    What Parents <span class="gradient-text">Say</span>
-                </h2>
-                <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">
-                    Hear from our parent community about their experiences
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="testimonial-card bg-white rounded-lg p-6 shadow-sm">
-                    <div class="flex items-start mb-4">
-                        <div class="quote-icon text-3xl mr-3">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="text-gray-700 nepali-text">
-                            मेरो छोराले यस विद्यालयमा धेरै प्रगति गरेको छ। शिक्षकहरू धेरै समर्पित छन् र बच्चाहरूलाई नैतिक शिक्षा पनि दिन्छन्। विद्यालयको वातावरण सीख्न र बढ्न उत्तम छ।
-                        </p>
-                    </div>
-                    <div class="flex items-center mt-6">
-                        <img src="./images/b5abbf78-4927-4c2e-893c-2105d7074249.jfif" alt="Parent" class="w-12 h-12 rounded-full object-cover border-2 border-blue-100">
-                        <div class="ml-4">
-                            <h4 class="font-semibold text-gray-800 nepali-text">गोविन्द न्यौपाने</h4>
-                            <p class="text-sm text-gray-500 nepali-text">कक्षा ३ को अभिभावक</p>
-                        </div>
-                    </div>
-                </div>
+        .popup-content { 
 
-                <div class="testimonial-card bg-white rounded-lg p-6 shadow-sm">
-                    <div class="flex items-start mb-4">
-                        <div class="quote-icon text-3xl mr-3">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="text-gray-700 nepali-text">
-                            विद्यालयले बच्चाहरूलाई केवल पुस्तकीय ज्ञान मात्र होइन, व्यावहारिक ज्ञान पनि दिन्छ। मेरी छोरीले यहाँ धेरै आत्मविश्वास प्राप्त गरेकी छिन्। पाठ्यक्रम बाहेकका गतिविधिहरू पनि उत्कृष्ट छन्।
-                        </p>
-                    </div>
-                    <div class="flex items-center mt-6">
-                        <img src="./images/808a98c0-5b9f-4026-8af8-dcc88c3e4961.jfif" alt="Parent" class="w-12 h-12 rounded-full object-cover border-2 border-blue-100">
-                        <div class="ml-4">
-                            <h4 class="font-semibold text-gray-800 nepali-text">प्रीति थापा</h4>
-                            <p class="text-sm text-gray-500 nepali-text">कक्षा ७ को अभिभावक</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card bg-white rounded-lg p-6 shadow-sm">
-                    <div class="flex items-start mb-4">
-                        <div class="quote-icon text-3xl mr-3">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="text-gray-700 nepali-text">
-                            हामीले धेरै विद्यालयहरू हेरेर यो विद्यालय छान्यौं र यो निर्णय सही थियो। बच्चाहरूको सुरक्षा, स्वच्छता र अनुशासनमा विद्यालयले ध्यान दिन्छ। शिक्षकहरू र प्रशासन सँग धेरै राम्रो सहकार्य छ।
-                        </p>
-                    </div>
-                    <div class="flex items-center mt-6">
-                        <img src="./images/2cb84132-14d3-4a6d-b733-70b4fba922ed.jfif" alt="Parent" class="w-12 h-12 rounded-full object-cover border-2 border-blue-100">
-                        <div class="ml-4">
-                            <h4 class="font-semibold text-gray-800 nepali-text">मीना ब्यञ्जनकार</h4>
-                            <p class="text-sm text-gray-500 nepali-text">कक्षा ८ को अभिभावक</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Admissions Section -->
-    <section id="admissions" class="py-16 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2 mb-8 lg:mb-0" data-aos="fade-right">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Admissions Inquiries Closed</h2>
-                    <p class="text-xl mb-8 text-blue-100">
-                        Join Chandani Secondary School for a transformative educational journey. Limited seats available!
-                    </p>
-                    
-                    <div class="bg-blue-900 bg-opacity-50 rounded-xl p-8 mb-8">
-                        <h3 class="text-2xl font-bold mb-6">Admission Process</h3>
-                        <ul class="admission-process space-y-4">
-                            <li>Submit online application form with required documents</li>
-                            <li>Entrance test (for grades 2 and above) to assess basic competencies</li>
-                            <li>Interview with parents and student to understand expectations</li>
-                            <li>Admission confirmation and fee payment to secure the seat</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-blue-900 bg-opacity-30 rounded-xl p-6">
-                        <h4 class="font-bold mb-3 flex items-center">
-                            <i class="fas fa-graduation-cap mr-2"></i> Scholarship Information
-                        </h4>
-                        <p class="text-blue-100">
-                            * Merit-based scholarships available for top performers in entrance tests. Need-based financial aid also offered for deserving students.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="lg:w-1/2" data-aos="fade-left">
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
-                    <div class="bg-gradient-to-r from-blue-700 to-blue-600 p-6">
-                        <h3 class="text-xl font-bold text-white flex items-center">
-                            <i class="fas fa-file-alt mr-3"></i> Admission Inquiry Form
-                        </h3>
-                    </div>
-                    
-                    <!-- Add this notification div at the top of the form -->
-                    <div id="admission-notification" class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mx-6 mt-6 hidden">
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <i class="fas fa-exclamation-circle text-yellow-500"></i>
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-sm text-yellow-700">
-                                    <strong>Admission inquiries are currently closed.</strong> New admissions typically open in March/April each year. Please check back later or contact the school office for more information.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <form id="admission-form" class="p-6 text-gray-800">
-                        <div class="mb-4">
-                            <label class="block text-gray-700 font-medium mb-2" for="name">Parent's Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required disabled>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 font-medium mb-2" for="email">Email <span class="text-red-500">*</span></label>
-                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required disabled>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 font-medium mb-2" for="phone">Phone <span class="text-red-500">*</span></label>
-                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required disabled>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 font-medium mb-2" for="grade">Grade Applying For <span class="text-red-500">*</span></label>
-                            <select id="grade" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required disabled>
-                                <option value="">Select Grade</option>
-                                <option value="nursery">Nursery</option>
-                                <option value="lkg">LKG</option>
-                                <option value="ukg">UKG</option>
-                                <option value="1">Grade 1</option>
-                                <option value="2">Grade 2</option>
-                                <option value="3">Grade 3</option>
-                                <option value="4">Grade 4</option>
-                                <option value="5">Grade 5</option>
-                                <option value="6">Grade 6</option>
-                                <option value="7">Grade 7</option>
-                                <option value="8">Grade 8</option>
-                                <option value="9">Grade 9</option>
-                                <option value="10">Grade 10</option>
-                            </select>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-medium mb-2" for="message">Message (Optional)</label>
-                            <textarea id="message" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" disabled></textarea>
-                        </div>
-                        <button type="button" id="submit-btn" class="w-full bg-gray-400 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center cursor-not-allowed">
-                            <i class="fas fa-paper-plane mr-2"></i> Submit Inquiry
-                        </button>
-                    </form>
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-12 pb-6">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <img src="./images/logo.jpg" alt="School Logo" class="h-24 w-25 object-cover rounded-full mr-3 border-2 border-blue-500 align-items:center;">
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold">Chandani Secondary School</h3>
-                        <p class="text-xs text-gray-400">Lalitpur, Nepal</p>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">About Us</h4>
-                    <p class="text-gray-400 mb-4 text-sm">
-                        Providing quality education in Nepal since 1989. Committed to academic excellence and holistic development of students.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/profile.php?id=100064005759165" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
+            width: 98%; 
 
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
-                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-                </div>
+        } 
 
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
-                    <address class="text-gray-400 not-italic text-sm">
-                        <div class="flex items-start mb-3">
-                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
-                            <a href="https://www.google.com/maps/place/Chandani+Secondary+English+School/@27.6777437,85.326173,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb19c6b663dd47:0xaf78b3293d760622!8m2!3d27.677739!4d85.3287479!16s%2Fg%2F11b6rxsnj4?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
-                                <span>Shankhamul, Lalitpur, Nepal</span>
-                            </a>
-                        </div>
-                        <div class="flex items-start mb-3">
-                            <i class="fas fa-phone-alt mt-1 mr-3 text-blue-400"></i>
-                            <a href="tel:+977-1-5912488">
-                                <span>+977-1-5912488</span>
-                            </a>
-                        </div>
-                        <div class="flex items-start mb-3">
-                            <i class="fas fa-envelope mt-1 mr-3 text-blue-400"></i>
-                            <a href="mailto:info@chandani.edu.np">
-                                <span>info@chandani.edu.np</span>
-                            </a>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-clock mt-1 mr-3 text-blue-400"></i>
-                            <span>Sunday-Friday: 9:00 AM - 4:00 PM</span>
-                        </div>
-                    </address>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
-                <p>&copy; 2025 Chandani Secondary School. All Rights Reserved.</p>
+        .close-btn { 
 
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-5 right-5 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg hidden transition-all duration-300">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-    
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS animation library
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            offset: 120
-        });
-        
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenuButton.innerHTML = mobileMenu.classList.contains('hidden') ? 
-                '<i class="fas fa-bars text-2xl"></i>' : 
-                '<i class="fas fa-times text-2xl"></i>';
-        });
-        
-        // Hero Slideshow
-        const heroSlides = document.querySelectorAll('.hero-slide');
-        let currentSlide = 0;
-        
-        function showSlide(n) {
-            heroSlides.forEach(slide => slide.classList.remove('active'));
-            heroSlides[n].classList.add('active');
-        }
-        
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % heroSlides.length;
-            showSlide(currentSlide);
-        }
-        
-        // Change slide every 5 seconds
-        setInterval(nextSlide, 5000);
-        
-        // Counter Animation
-        function animateCounter(elementId, target, duration = 2000) {
-            const element = document.getElementById(elementId);
-            const start = 0;
-            const increment = target / (duration / 16);
-            let current = start;
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    clearInterval(timer);
-                    current = target;
-                // Add '+' sign only at the end for students counter
-                if (elementId === 'students-counter'|| elementId === 'alumni-counter') {
-                    element.textContent = Math.floor(current).toLocaleString() + '+';
-                } else {
-                    element.textContent = Math.floor(current).toLocaleString();
-                }
-                } else {
-                    element.textContent = Math.floor(current).toLocaleString();
-                }
-            }, 16);
-        }
+            top: -10px; 
 
-        // Intersection Observer for counter animation
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounter('years-counter', 36);
-                    animateCounter('students-counter', 250);
-                    animateCounter('teachers-counter', 24);
-                    animateCounter('alumni-counter', 3200);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {threshold: 0.5});
+            right: -10px; 
 
-        const counterSection = document.querySelector('.counter-item').parentElement.parentElement;
-        observer.observe(counterSection);
-        
-        // Back to Top Button
-        const backToTopButton = document.getElementById('back-to-top');
-        
-        window.addEventListener('scroll', () => {
-            // Alert if content exceeds viewport
-            if (document.documentElement.scrollWidth > window.innerWidth) {
-                console.warn('Content exceeds viewport width!');
-                document.body.style.overflowX = 'hidden';
-            }
-            // Force mobile viewport
-            if (window.innerWidth <= 768) {
-                document.querySelector('meta[name="viewport"]')
-                .setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0');
-            }
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('hidden');
-            } else {
-                backToTopButton.classList.add('hidden');
-            }
-        });
-        
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                        mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
-                    }
-                }
-            });
-        });
-    </script>
+            width: 35px; 
+
+            height: 35px; 
+
+        } 
+
+    }
+
+     
+    .admission-process li:nth-child(1)::before { content: "1"; } 
+
+    .admission-process li:nth-child(2)::before { content: "2"; } 
+
+    .admission-process li:nth-child(3)::before { content: "3"; } 
+
+    .admission-process li:nth-child(4)::before { content: "4"; } 
+
+</style> 
+ <div class="popup-overlay" id="popup"> 
+
+    <div class="popup-content"> 
+
+        <img src="https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"  
+
+             alt="Loading Image" class="popup-image"> 
+
+        <div class="close-btn" onclick="closePopup()"> 
+
+            <i data-feather="x" class="text-gray-800"></i> 
+
+        </div> 
+
+    </div> 
+
+</div>
+
+<!-- Navigation --> 
+
+<nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-sm border-b border-gray-100"> 
+
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center"> 
+
+        <div class="flex items-center"> 
+
+            <a href="index.html" class="flex items-center group"> 
+
+                <img src="./images/logo.jpg" alt="School Logo" class="h-12 w-12 object-cover rounded-full mr-3 border-2 border-blue-500 transition-transform duration-300 group-hover:scale-105"> 
+
+                <div> 
+
+                    <h1 class="text-xl font-bold text-blue-800 group-hover:text-blue-600 transition-colors">Chandani Secondary School</h1> 
+
+                    <p class="text-xs text-gray-600 group-hover:text-gray-800 transition-colors">Lalitpur, Nepal</p> 
+
+                </div> 
+
+            </a> 
+
+        </div> 
+
+         
+
+        <div class="hidden lg:flex space-x-6 items-center"> 
+
+            <a href="#" class="relative text-blue-800 hover:text-blue-600 transition-colors px-3 py-2 group"> 
+
+                <span>Home</span> 
+
+                <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600"></span> 
+
+            </a> 
+
+            <a href="about.html" class="relative text-gray-600 hover:text-blue-600 transition-colors px-3 py-2 group"> 
+
+                <span>About</span> 
+
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span> 
+
+            </a> 
+
+            <a href="gallery.html" class="relative text-gray-600 hover:text-blue-600 transition-colors px-3 py-2 group"> 
+
+                <span>Gallery</span> 
+
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span> 
+
+            </a> 
+
+            <a href="contact.html" class="relative text-gray-600 hover:text-blue-600 transition-colors px-3 py-2 group"> 
+
+                <span>Contact</span> 
+
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span> 
+
+            </a> 
+
+            <a href="index.html#admissions" class="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"> 
+
+                Admissions 
+
+            </a> 
+
+        </div> 
+
+         
+
+        <button class="lg:hidden text-gray-600 focus:outline-none" id="mobile-menu-button"> 
+
+            <i class="fas fa-bars text-2xl"></i> 
+
+        </button> 
+
+    </div> 
+
+     
+
+    <!-- Mobile Menu --> 
+
+    <div class="lg:hidden hidden bg-white/95 w-full py-4 px-6 shadow-lg backdrop-blur-sm" id="mobile-menu"> 
+
+        <div class="flex flex-col space-y-4"> 
+
+            <a href="#" class="block py-2 text-blue-800 border-b border-gray-100 hover:text-blue-600 hover:bg-blue-50 px-2 rounded transition-colors">Home</a> 
+
+            <a href="about.html" class="block py-2 text-gray-600 border-b border-gray-100 hover:text-blue-600 hover:bg-blue-50 px-2 rounded transition-colors">About</a> 
+
+            <a href="gallery.html" class="block py-2 text-gray-600 border-b border-gray-100 hover:text-blue-600 hover:bg-blue-50 px-2 rounded transition-colors">Gallery</a> 
+
+            <a href="contact.html" class="block py-2 text-gray-600 border-b border-gray-100 hover:bg-blue-50 px-2 rounded transition-colors">Contact</a> 
+
+            <a href="index.html#admissions" class="block bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center font-medium py-3 px-6 rounded-full mt-2 shadow-md hover:shadow-lg transition-all"> 
+
+                Admissions 
+
+            </a> 
+
+        </div> 
+
+    </div> 
+
+</nav> 
+
+
+
+<!-- Breaking News Ticker --> 
+
+<div class="news-ticker text-white py-3 px-4"> 
+
+    <div class="container mx-auto flex items-center"> 
+
+        <a href="gallery.html" class="flex-shrink-0"> 
+
+            <span class="font-bold mr-4 bg-white text-red-600 px-3 py-1 rounded-full text-sm flex items-center"> 
+
+                <i class="fas fa-bolt mr-2"></i> BREAKING 
+
+            </span> 
+
+        </a> 
+
+        <div class="marquee-container w-full"> 
+
+            <div class="marquee-content"> 
+
+                 <span class="mr-8"> <span class="mr-8"> आदरणीय अभिभावक ज्यूहरू,  Gen-Z आन्दोलनमा शाहदत प्राप्त सहिदहरु प्रति श्रध्दाञ्ली अर्पण गर्दै मिति २०८२ साल असोज १ गते यस विडायालय बन्द हुने व्यहोरो अनुरोध गर्दछु ।</span> 
+
+                 <span class="mr-8"> <span class="mr-8"> भोलि हुने परीक्षा मिति ०८२ असोज ४ गते हुने र परीक्षामा सहभागि हुने बाबुनानीहरुको प्रवेशपत्र वितरणकोलागि भोलि मिति ०८२ असोज 1 गते दिनको २ बजे सम्म लेखाशाखा खुल्ला हुने पनि सुचित गर्दछु ।</span>     
+
+                <span class="mr-8">Chandani School incorportes School Management App Pathshala</span> 
+
+        </div> 
+
+        </div> 
+
+    </div> 
+
+</div> 
+
+
+
+<!-- Hero Section with Slideshow Background --> 
+
+<section class="hero-section"> 
+
+    <div class="hero-slideshow"> 
+
+        <div class="hero-slide active" style="background-image: url(./images/buildingfront.jpeg);"></div> 
+
+        <div class="hero-slide" style="background-image: url(./images/flags.jpeg);"></div> 
+
+        <div class="hero-slide" style="background-image: url(./images/504619291_1140145458128969_8238071332087389116_n.jpg);"></div> 
+
+        <div class="hero-slide" style="background-image: url(./images/compound.jpeg);"></div> 
+
+    </div> 
+
+     
+
+    <div class="hero-content"> 
+
+        <div class="container mx-auto px-4 text-center"> 
+
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" data-aos="fade-down"> 
+
+                <span class="gradient-text">Quality Education</span> in Nepal 
+
+            </h1> 
+
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200" data-aos="fade-down" data-aos-delay="100"> 
+
+                Nurturing Future Leaders Through Holistic Education Since 1989 
+
+            </p> 
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4"> 
+
+                <a href="#admissions" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 flex items-center justify-center" data-aos="zoom-in" data-aos-delay="200"> 
+
+                    <i class="fas fa-user-graduate mr-2"></i> Apply Now 
+
+                </a> 
+
+                <a href="#about" class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-3 px-8 rounded-full transition duration-300 flex items-center justify-center" data-aos="zoom-in" data-aos-delay="300"> 
+
+                    <i class="fas fa-info-circle mr-2"></i> Learn More 
+
+                </a> 
+
+            </div> 
+
+        </div> 
+
+    </div> 
+
+     
+
+    <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white text-3xl animate-bounce" data-aos="fade-up" data-aos-delay="500"> 
+
+        <i class="fas fa-chevron-down"></i> 
+
+    </a> 
+
+</section> 
+
+ 
+
+  <!-- Quick Facts --> 
+
+<section class="py-16 bg-white"> 
+
+    <div class="container mx-auto px-4 text-center"> 
+
+        <h2 class="text-4xl font-bold mb-4 text-blue-800 section-title">Chandani<span class="gradient-text text-4xl font-bold"> at a Glance</span></h2> 
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 line-height: 1.5 p-4"> 
+
+            <div class="counter-item bg-blue-50 p-6 rounded-lg text-center"> 
+
+                <div class="text-4xl font-bold text-blue-600 mb-2" id="years-counter">0</div> 
+
+                <div class="text-gray-600">Years of Excellence</div> 
+
+            </div> 
+
+            <div class="counter-item bg-green-50 p-6 rounded-lg text-center"> 
+
+                <div class="text-4xl font-bold text-green-600 mb-2" id="students-counter">0</div> 
+
+                <div class="text-gray-600">Current Students</div> 
+
+            </div> 
+
+            <div class="counter-item bg-yellow-50 p-6 rounded-lg text-center"> 
+
+                <div class="text-4xl font-bold text-yellow-600 mb-2" id="teachers-counter">0</div> 
+
+                <div class="text-gray-600">Qualified Teachers</div> 
+
+            </div> 
+
+            <div class="counter-item bg-purple-50 p-6 rounded-lg text-center"> 
+
+                <div class="text-4xl font-bold text-purple-600 mb-2" id="alumni-counter">0</div> 
+
+                <div class="text-gray-600">Successful Alumni</div> 
+
+            </div> 
+
+        </div> 
+
+    </div> 
+
+</section> 
+
+ 
+
+<!-- About Section --> 
+
+<section id="about" class="py-16 bg-gray-100"> 
+
+    <div class="container mx-auto px-4"> 
+
+        <div class="text-center mb-12"> 
+
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800 section-title" data-aos="fade-up"> 
+
+                About <span class="gradient-text">Our School</span> 
+
+            </h2> 
+
+            <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100"> 
+
+                Committed to academic excellence and holistic development in the heart of Lalitpur 
+
+            </p> 
+
+        </div> 
+
+         
+
+        <div class="flex flex-col lg:flex-row items-center gap-12"> 
+
+            <div class="lg:w-1/2" data-aos="fade-right"> 
+
+                <div class="relative rounded-xl overflow-hidden shadow-xl hover:scale-105 transition duration-300"> 
+
+                    <img src="./images/stages1.jpeg" alt="School Building" class="w-full h-auto object-cover transition-transform"> 
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-6"> 
+
+                        <div>   
+
+                            <h3 class="text-white text-xl font-bold">Our School</h3> 
+
+                            <p class="text-gray-200">A nurturing environment for learning and growth</p> 
+
+                        </div> 
+
+                    </div> 
+
+                </div> 
+
+            </div> 
+
+            <div class="lg:w-1/2" data-aos="fade-left"> 
+
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4"> 
+
+                    Welcome to Chandani English School 
+
+                </h3> 
+
+                <p class="text-gray-600 mb-4 text-lg my-paragraph"> 
+
+                    Established in 1989, Chandani English School is one of the premier educational institutions in Lalitpur, Nepal. We are committed to providing quality education that combines academic excellence with moral values and life skills. 
+
+                </p> 
+
+                <p class="text-gray-600 mb-6 text-lg my-paragraph"> 
+
+                    Our mission is to nurture young minds to become responsible global citizens while preserving their Nepali identity and cultural heritage through innovative teaching methodologies and a supportive learning environment. 
+
+                </p> 
+
+                 
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8"> 
+
+                    <div class="flex items-start" data-aos="zoom-in" data-aos-delay="100"> 
+
+                        <div class="bg-blue-100 p-2 rounded-full mr-3"> 
+
+                            <i class="fas fa-check-circle text-blue-600"></i> 
+
+                        </div> 
+
+                        <span class="text-gray-700 font-medium">NEB Curriculum</span> 
+
+                    </div> 
+
+                    <div class="flex items-start" data-aos="zoom-in" data-aos-delay="200"> 
+
+                        <div class="bg-blue-100 p-2 rounded-full mr-3"> 
+
+                            <i class="fas fa-check-circle text-blue-600"></i> 
+
+                        </div> 
+
+                        <span class="text-gray-700 font-medium">Modern Facilities</span> 
+
+                    </div> 
+
+                    <div class="flex items-start" data-aos="zoom-in" data-aos-delay="300"> 
+
+                        <div class="bg-blue-100 p-2 rounded-full mr-3"> 
+
+                            <i class="fas fa-check-circle text-blue-600"></i> 
+
+                        </div> 
+
+                        <span class="text-gray-700 font-medium">Experienced Faculty</span> 
+
+                    </div> 
+
+                    <div class="flex items-start" data-aos="zoom-in" data-aos-delay="400"> 
+
+                        <div class="bg-blue-100 p-2 rounded-full mr-3"> 
+
+                            <i class="fas fa-check-circle text-blue-600"></i> 
+
+                        </div> 
+
+                        <span class="text-gray-700 font-medium">Holistic Development</span> 
+
+                    </div> 
+
+                </div> 
+
+                 
+
+                <div class="flex flex-col sm:flex-row gap-4"> 
+
+                    <a href="about.html" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full transition duration-300" data-aos="zoom-in"> 
+
+                        Read More <i class="fas fa-arrow-right ml-2"></i> 
+
+                    </a> 
+
+                    <a href="#" class="inline-flex items-center justify-center border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium py-3 px-6 rounded-full transition duration-300" data-aos="zoom-in" data-aos-delay="100"> 
+
+                        <i class="fas fa-play-circle mr-2"></i> Watch Video 
+
+                    </a> 
+
+                </div> 
+
+            </div> 
+
+        </div> 
+
+    </div> 
+
+</section> 
+
+ 
+
+<!-- Academics Section --> 
+
+<section id="academics" class="py-16"> 
+
+    <div class="container mx-auto px-4"> 
+
+        <div class="text-center mb-12"> 
+
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800 section-title" data-aos="fade-up"> 
+
+                Our <span class="gradient-text">Academic Programs</span> 
+
+            </h2> 
+
+            <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100"> 
+
+                Comprehensive educational programs from early childhood to higher secondary education 
+
+            </p> 
+
+        </div> 
+
+         
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8"> 
+
+            <div class="bg-white p-8 rounded-xl shadow-md card-hover" data-aos="fade-up"> 
+
+                <div class="text-blue-600 text-5xl mb-6"> 
+
+                    <i class="fas fa-child"></i> 
+
+                </div> 
+
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Primary Level (Nursery-UKG)</h3> 
+
+                <p class="text-gray-600 mb-6 my-paragraph"> 
+
+                    Our primary program focuses on foundational learning with a blend of academics and creative activities to stimulate young minds. 
+
+                </p> 
+
+                <ul class="text-gray-600 space-y-3 mb-6"> 
+
+                    <li class="flex items-start"> 
+
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i> 
+
+                        <span>Interactive learning methods</span> 
+
+                    </li> 
+
+                    <li class="flex items-start"> 
+
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i> 
+
+                        <span>Focus on literacy and numeracy</span> 
+
+                    </li> 
+
+                    <li class="flex items-start"> 
+
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i> 
+
+                        <span>Creative arts integration</span> 
+
+                    </li> 
+
+                </ul> 
+
+            </div> 
+
+             
+
+            <div class="bg-white p-8 rounded-xl shadow-md card-hover" data-aos="fade-up" data-aos-delay="100"> 
+
+                <div class="text-blue-600 text-5xl mb-6"> 
+
+                    <i class="fas fa-book-open"></i> 
+
+                </div> 
+
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Lower Secondary (1-8)</h3> 
+
+                <p class="text-gray-600 mb-6 my-paragraph"> 
+
+                    Our lower secondary program builds on foundational knowledge while introducing specialized subjects and critical thinking skills. 
+
+                </p> 
+
+                <ul class="text-gray-600 space-y-3 mb-6"> 
+
+                    <li class="flex items-start"> 
+
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i> 
+
+                        <span>Subject specialization begins</span> 
+
+                    </li> 
+
+                    <li class="flex items-start"> 
+
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i> 
+
+                        <span>Project-based learning</span> 
+
+                    </li> 
+
+                    <li class="flex items-start"> 
+
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i> 
+
+                        <span>Critical thinking development</span> 
+
+                    </li> 
+
+                </ul> 
+
+            </div> 
+
+             
+
+            <div class="bg-white p-8 rounded-xl shadow-md card-hover" data-aos="fade-up" data-aos-delay="200"> 
+
+                <div class="text-blue-600 text-5xl mb-6"> 
+
+                    <i class="fas fa-graduation-cap"></i> 
+
+                </div> 
+
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Secondary Level (9-10)</h3> 
+
+                <p class="text-gray-600 mb-6 my-paragraph"> 
+
+                    Our secondary program prepares students for SEE and higher education with rigorous academics and career guidance. 
+
+                </p> 
+
+                <ul class="text-gray-600 space-y-3 mb-6"> 
+
+                    <li class="flex items-start"> 
+
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i> 
+
+                        <span>Base for Distinct fields</span> 
+
+                    </li> 
+
+                    <li class="flex items-start"> 
+
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i> 
+
+                        <span>Career counseling</span> 
+
+                    </li> 
+
+                    <li class="flex items-start"> 
+
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i> 
+
+                        <span>Research and innovation focus</span> 
+
+                    </li> 
+
+                </ul> 
+
+            </div> 
+
+        </div> 
+
+    </div> 
+
+</section> 
+
+ 
+
+<!-- Facilities Section --> 
+
+<section id="facilities" class="py-16 bg-white"> 
+
+    <div class="container mx-auto px-4"> 
+
+        <div class="text-center mb-12"> 
+
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800 section-title" data-aos="fade-up"> 
+
+                Our <span class="gradient-text">Facilities</span> 
+
+            </h2> 
+
+            <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100"> 
+
+                State-of-the-art infrastructure to support learning and overall development 
+
+            </p> 
+
+        </div> 
+
+         
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> 
+
+            <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md card-hover" data-aos="zoom-in" data-aos-delay="200"> 
+
+                <div class="relative overflow-hidden h-60"> 
+
+                    <img src="./images/c0c95cfd02be.jfif" alt="Sports" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"> 
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6"> 
+
+                        <h3 class="text-xl font-bold text-white">Sports Complex</h3> 
+
+                    </div> 
+
+                </div> 
+
+                <div class="p-6"> 
+
+                    <p class="text-gray-600"> 
+
+                        Indoor and outdoor sports facilities including basketball, volleyball, badminton, table tennis, and a well-maintained playground. 
+
+                    </p> 
+
+                </div> 
+
+            </div> 
+
+             
+
+            <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md card-hover" data-aos="zoom-in" data-aos-delay="300"> 
+
+                <div class="relative overflow-hidden h-60"> 
+
+                    <img src="./images/computer.png" alt="Computer Lab" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"> 
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6"> 
+
+                        <h3 class="text-xl font-bold text-white">Computer Lab</h3> 
+
+                    </div> 
+
+                </div> 
+
+                <div class="p-6"> 
+
+                    <p class="text-gray-600"> 
+
+                        Modern computer lab with high-speed internet, latest software, and one computer per student for digital literacy and coding classes. 
+
+                    </p> 
+
+                </div> 
+
+            </div> 
+
+             
+
+            <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md card-hover" data-aos="zoom-in" data-aos-delay="500"> 
+
+                <div class="relative overflow-hidden h-60"> 
+
+                    <img src="./images/canteen.jfif"> 
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6"> 
+
+                        <h3 class="text-xl font-bold text-white">Cafeteria</h3> 
+
+                    </div> 
+
+                </div> 
+
+                <div class="p-6"> 
+
+                    <p class="text-gray-600"> 
+
+                        Spacious and hygienic cafeteria serving nutritious meals and snacks, with options for different dietary requirements. 
+
+                    </p> 
+
+                </div> 
+
+            </div> 
+
+        </div> 
+
+    </div> 
+
+</section> 
+
+ 
+
+<!-- Gallery Section --> 
+
+<section id="gallery" class="py-16"> 
+
+    <div class="container mx-auto px-4"> 
+
+        <div class="text-center mb-12"> 
+
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800 section-title" data-aos="fade-up"> 
+
+                School <span class="gradient-text">Gallery</span> 
+
+            </h2> 
+
+            <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100"> 
+
+                A glimpse into life at Chandani Secondary English School 
+
+            </p> 
+
+        </div> 
+
+         
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4"> 
+
+            <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in"> 
+
+                <img src="./images/buildingfront.jpeg" alt="School Building" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500"> 
+
+            </div> 
+
+            <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="100"> 
+
+                <img src="./images/462758848_7640886396014335_6405602682601477974_n.jpg" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500"> 
+
+            </div> 
+
+            <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="200"> 
+
+                <img src="./images/c3b9dd12-8665-40bc-9d48-69fe7a4d1d43.jfif" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500"> 
+
+            </div> 
+
+            <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="300"> 
+
+                <img src="./images/469594501_7953941844708787_973711556533685088_n.jpg" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500"> 
+
+            </div> 
+
+            <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="400"> 
+
+                <img src="./images/56112f20-fe4c-4bfe-9bf1-4eb67c23b854.jfif" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500"> 
+
+            </div> 
+
+            <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="500"> 
+
+                <img src="./images/499685212.jpg" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500"> 
+
+            </div> 
+
+            <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="600"> 
+
+                <img src="./images/462892021_7640886372681004_7761318901610312949_n.jpg" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500"> 
+
+            </div> 
+
+            <div class="overflow-hidden rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="700"> 
+
+                <img src="./images/475419546_4010215299300179_6712551264027729784_n.jpg" class="w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500"> 
+
+            </div> 
+
+        </div> 
+
+         
+
+        <div class="text-center mt-10" data-aos="fade-up"> 
+
+            <a href="gallery.html" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition duration-300"> 
+
+                <i class="fas fa-images mr-2"></i> View More Photos 
+
+            </a> 
+
+        </div> 
+
+    </div> 
+
+</section> 
+
+ 
+
+<!-- News & Events --> 
+
+<section class="py-16 bg-white"> 
+
+    <div class="container mx-auto px-4"> 
+
+        <div class="text-center mb-12"> 
+
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800 section-title" data-aos="fade-up"> 
+
+                News & <span class="gradient-text">Events</span> 
+
+            </h2> 
+
+            <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100"> 
+
+                Stay updated with our latest happenings and announcements 
+
+            </p> 
+
+        </div> 
+
+         
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8"> 
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 card-hover" data-aos="fade-up"> 
+
+                <div class="relative h-48 overflow-hidden"> 
+
+                    <img src="./images/499786022.jpg" alt="Event" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"> 
+
+                    <div class="absolute top-4 right-4 bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full"> 
+
+                        Event 
+
+                    </div> 
+
+                </div> 
+
+                <div class="p-6"> 
+
+                    <div class="flex items-center text-sm text-gray-500 mb-3"> 
+
+                        <i class="far fa-calendar-alt mr-2"></i> 
+
+                        <span>May 23, 2025</span> 
+
+                    </div> 
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Trip to Amusement Park</h3> 
+
+                    <p class="text-gray-600 mb-4"> 
+
+                        Students' beating the warm weather with som fun and enthusiastic outdoor trip to the Whoopeeland.  
+
+                    </p> 
+
+                    <a href="gallery.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800"> 
+
+                        Read More <i class="fas fa-arrow-right ml-2"></i> 
+
+                    </a> 
+
+                </div> 
+
+            </div> 
+
+             
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 card-hover" data-aos="fade-up" data-aos-delay="100"> 
+
+                <div class="relative h-48 overflow-hidden"> 
+
+                    <img src="./images/480276237_8318777608225207_2948882358926135473_n.jpg" alt="Event" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"> 
+
+                    <div class="absolute top-4 right-4 bg-red-600 text-white text-sm font-bold px-3 py-1 rounded-full"> 
+
+                        Announcement 
+
+                    </div> 
+
+                </div> 
+
+                <div class="p-6"> 
+
+                    <div class="flex items-center text-sm text-gray-500 mb-3"> 
+
+                        <i class="far fa-calendar-alt mr-2"></i> 
+
+                        <span>Sept 14, 2025</span> 
+
+                    </div> 
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Children's Day Celebration</h3> 
+
+                    <p class="text-gray-600 mb-4"> 
+
+                        Students presented cultural programs to celebrate Children's day with fervor and pride. 
+
+                    </p> 
+
+                    <a href="gallery.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800"> 
+
+                        Read More <i class="fas fa-arrow-right ml-2"></i> 
+
+                    </a> 
+
+                </div> 
+
+            </div> 
+
+             
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 card-hover" data-aos="fade-up" data-aos-delay="200"> 
+
+                <div class="relative h-48 overflow-hidden"> 
+
+                    <img src="./images/499761579_8962090940560534_6654580310796421238_n.jpg" alt="Event" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"> 
+
+                    <div class="absolute top-4 right-4 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded-full"> 
+
+                        Achievement 
+
+                    </div> 
+
+                </div> 
+
+                <div class="p-6"> 
+
+                    <div class="flex items-center text-sm text-gray-500 mb-3"> 
+
+                        <i class="far fa-calendar-alt mr-2"></i> 
+
+                        <span>May 24, 2025</span> 
+
+                    </div> 
+
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Taekwando Competition</h3> 
+
+                    <p class="text-gray-600 mb-4"> 
+
+                        Our students distinctive taekwando skills at the inter school taekwando championship, with several students winning district-level recognition. 
+
+                    </p> 
+
+                    <a href="gallery.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800"> 
+
+                        Read More <i class="fas fa-arrow-right ml-2"></i> 
+
+                    </a> 
+
+                </div> 
+
+            </div> 
+
+        </div> 
+
+         
+
+        <div class="text-center mt-10" data-aos="fade-up"> 
+
+            <a href="gallery.html" class="inline-flex items-center justify-center border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium py-3 px-8 rounded-full transition duration-300"> 
+
+                <i class="far fa-newspaper mr-2"></i> View All News 
+
+            </a> 
+
+        </div> 
+
+    </div> 
+
+</section> 
+
+ 
+
+<!-- Testimonials --> 
+
+<section class="py-16 bg-gradient-to-r from-blue-50 to-indigo-50"> 
+
+    <div class="container mx-auto px-4"> 
+
+        <div class="text-center mb-12"> 
+
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4 section-title" data-aos="fade-up"> 
+
+                What Parents <span class="gradient-text">Say</span> 
+
+            </h2> 
+
+            <p class="text-gray-600 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100"> 
+
+                Hear from our parent community about their experiences 
+
+            </p> 
+
+        </div> 
+
+         
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> 
+
+            <div class="testimonial-card bg-white rounded-lg p-6 shadow-sm"> 
+
+                <div class="flex items-start mb-4"> 
+
+                    <div class="quote-icon text-3xl mr-3"> 
+
+                        <i class="fas fa-quote-left"></i> 
+
+                    </div> 
+
+                    <p class="text-gray-700 nepali-text"> 
+
+                        मेरो छोराले यस विद्यालयमा धेरै प्रगति गरेको छ। शिक्षकहरू धेरै समर्पित छन् र बच्चाहरूलाई नैतिक शिक्षा पनि दिन्छन्। विद्यालयको वातावरण सीख्न र बढ्न उत्तम छ। 
+
+                    </p> 
+
+                </div> 
+
+                <div class="flex items-center mt-6"> 
+
+                    <img src="./images/b5abbf78-4927-4c2e-893c-2105d7074249.jfif" alt="Parent" class="w-12 h-12 rounded-full object-cover border-2 border-blue-100"> 
+
+                    <div class="ml-4"> 
+
+                        <h4 class="font-semibold text-gray-800 nepali-text">गोविन्द न्यौपाने</h4> 
+
+                        <p class="text-sm text-gray-500 nepali-text">कक्षा ३ को अभिभावक</p> 
+
+                    </div> 
+
+                </div> 
+
+            </div> 
+
+
+
+            <div class="testimonial-card bg-white rounded-lg p-6 shadow-sm"> 
+
+                <div class="flex items-start mb-4"> 
+
+                    <div class="quote-icon text-3xl mr-3"> 
+
+                        <i class="fas fa-quote-left"></i> 
+
+                    </div> 
+
+                    <p class="text-gray-700 nepali-text"> 
+
+                        विद्यालयले बच्चाहरूलाई केवल पुस्तकीय ज्ञान मात्र होइन, व्यावहारिक ज्ञान पनि दिन्छ। मेरी छोरीले यहाँ धेरै आत्मविश्वास प्राप्त गरेकी छिन्। पाठ्यक्रम बाहेकका गतिविधिहरू पनि उत्कृष्ट छन्। 
+
+                    </p> 
+
+                </div> 
+
+                <div class="flex items-center mt-6"> 
+
+                    <img src="./images/808a98c0-5b9f-4026-8af8-dcc88c3e4961.jfif" alt="Parent" class="w-12 h-12 rounded-full object-cover border-2 border-blue-100"> 
+
+                    <div class="ml-4"> 
+
+                        <h4 class="font-semibold text-gray-800 nepali-text">प्रीति थापा</h4> 
+
+                        <p class="text-sm text-gray-500 nepali-text">कक्षा ७ को अभिभावक</p> 
+
+                    </div> 
+
+                </div> 
+
+            </div> 
+
+            <div class="testimonial-card bg-white rounded-lg p-6 shadow-sm"> 
+
+                <div class="flex items-start mb-4"> 
+
+                    <div class="quote-icon text-3xl mr-3"> 
+
+                        <i class="fas fa-quote-left"></i> 
+
+                    </div> 
+
+                    <p class="text-gray-700 nepali-text"> 
+
+                        हामीले धेरै विद्यालयहरू हेरेर यो विद्यालय छान्यौं र यो निर्णय सही थियो। बच्चाहरूको सुरक्षा, स्वच्छता र अनुशासनमा विद्यालयले ध्यान दिन्छ। शिक्षकहरू र प्रशासन सँग धेरै राम्रो सहकार्य छ। 
+
+                    </p> 
+
+                </div> 
+
+                <div class="flex items-center mt-6"> 
+
+                    <img src="./images/2cb84132-14d3-4a6d-b733-70b4fba922ed.jfif" alt="Parent" class="w-12 h-12 rounded-full object-cover border-2 border-blue-100"> 
+
+                    <div class="ml-4"> 
+
+                        <h4 class="font-semibold text-gray-800 nepali-text">मीना ब्यञ्जनकार</h4> 
+
+                        <p class="text-sm text-gray-500 nepali-text">कक्षा ८ को अभिभावक</p> 
+
+                    </div> 
+
+                </div> 
+
+            </div> 
+
+        </div> 
+
+    </div> 
+
+</section> 
+
+ 
+
+<!-- Admissions Section --> 
+
+<section id="admissions" class="py-16 bg-gradient-to-r from-blue-800 to-blue-600 text-white"> 
+
+    <div class="container mx-auto px-4"> 
+
+        <div class="flex flex-col lg:flex-row items-center gap-12"> 
+
+            <div class="lg:w-1/2 mb-8 lg:mb-0" data-aos="fade-right"> 
+
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Admissions Inquiries Closed</h2> 
+
+                <p class="text-xl mb-8 text-blue-100"> 
+
+                    Join Chandani Secondary School for a transformative educational journey. Limited seats available! 
+
+                </p> 
+
+                 
+
+                <div class="bg-blue-900 bg-opacity-50 rounded-xl p-8 mb-8"> 
+
+                    <h3 class="text-2xl font-bold mb-6">Admission Process</h3> 
+
+                    <ul class="admission-process space-y-4"> 
+
+                        <li>Submit online application form with required documents</li> 
+
+                        <li>Entrance test (for grades 2 and above) to assess basic competencies</li> 
+
+                        <li>Interview with parents and student to understand expectations</li> 
+
+                        <li>Admission confirmation and fee payment to secure the seat</li> 
+
+                    </ul> 
+
+                </div> 
+
+                 
+
+                <div class="bg-blue-900 bg-opacity-30 rounded-xl p-6"> 
+
+                    <h4 class="font-bold mb-3 flex items-center"> 
+
+                        <i class="fas fa-graduation-cap mr-2"></i> Scholarship Information 
+
+                    </h4> 
+
+                    <p class="text-blue-100"> 
+
+                        * Merit-based scholarships available for top performers in entrance tests. Need-based financial aid also offered for deserving students. 
+
+                    </p> 
+
+                </div> 
+
+            </div> 
+
+             
+
+            <div class="lg:w-1/2" data-aos="fade-left"> 
+
+            <div class="bg-white rounded-xl shadow-2xl overflow-hidden"> 
+
+                <div class="bg-gradient-to-r from-blue-700 to-blue-600 p-6"> 
+
+                    <h3 class="text-xl font-bold text-white flex items-center"> 
+
+                        <i class="fas fa-file-alt mr-3"></i> Admission Inquiry Form 
+
+                    </h3> 
+
+                </div> 
+
+                 
+
+                <!-- Add this notification div at the top of the form --> 
+
+                <div id="admission-notification" class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mx-6 mt-6 hidden"> 
+
+                    <div class="flex"> 
+
+                        <div class="flex-shrink-0"> 
+
+                            <i class="fas fa-exclamation-circle text-yellow-500"></i> 
+
+                        </div> 
+
+                        <div class="ml-3"> 
+
+                            <p class="text-sm text-yellow-700"> 
+
+                                <strong>Admission inquiries are currently closed.</strong> New admissions typically open in March/April each year. Please check back later or contact the school office for more information. 
+
+                            </p> 
+
+                        </div> 
+
+                    </div> 
+
+                </div> 
+
+                 
+
+                <form id="admission-form" class="p-6 text-gray-800"> 
+
+                    <div class="mb-4"> 
+
+                        <label class="block text-gray-700 font-medium mb-2" for="name">Parent's Name <span class="text-red-500">*</span></label> 
+
+                        <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required disabled> 
+
+                    </div> 
+
+                    <div class="mb-4"> 
+
+                        <label class="block text-gray-700 font-medium mb-2" for="email">Email <span class="text-red-500">*</span></label> 
+
+                        <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required disabled> 
+
+                    </div> 
+
+                    <div class="mb-4"> 
+
+                        <label class="block text-gray-700 font-medium mb-2" for="phone">Phone <span class="text-red-500">*</span></label> 
+
+                        <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required disabled> 
+
+                    </div> 
+
+                    <div class="mb-4"> 
+
+                        <label class="block text-gray-700 font-medium mb-2" for="grade">Grade Applying For <span class="text-red-500">*</span></label> 
+
+                        <select id="grade" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required disabled> 
+
+                            <option value="">Select Grade</option> 
+
+                            <option value="nursery">Nursery</option> 
+
+                            <option value="lkg">LKG</option> 
+
+                            <option value="ukg">UKG</option> 
+
+                            <option value="1">Grade 1</option> 
+
+                            <option value="2">Grade 2</option> 
+
+                            <option value="3">Grade 3</option> 
+
+                            <option value="4">Grade 4</option> 
+
+                            <option value="5">Grade 5</option> 
+
+                            <option value="6">Grade 6</option> 
+
+                            <option value="7">Grade 7</option> 
+
+                            <option value="8">Grade 8</option> 
+
+                            <option value="9">Grade 9</option> 
+
+                            <option value="10">Grade 10</option> 
+
+                        </select> 
+
+                    </div> 
+
+                    <div class="mb-6"> 
+
+                        <label class="block text-gray-700 font-medium mb-2" for="message">Message (Optional)</label> 
+
+                        <textarea id="message" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" disabled></textarea> 
+
+                    </div> 
+
+                    <button type="button" id="submit-btn" class="w-full bg-gray-400 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center cursor-not-allowed"> 
+
+                        <i class="fas fa-paper-plane mr-2"></i> Submit Inquiry 
+
+                    </button> 
+
+                </form> 
+
+            </div> 
+
+        </div> 
+
+        </div> 
+
+    </div> 
+
+</section> 
+
+ 
+
+<!-- Footer --> 
+
+<footer class="bg-gray-900 text-white pt-12 pb-6"> 
+
+    <div class="container mx-auto px-4"> 
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8"> 
+
+            <div> 
+
+                <div class="flex items-center mb-4"> 
+
+                    <img src="./images/logo.jpg" alt="School Logo" class="h-24 w-25 object-cover rounded-full mr-3 border-2 border-blue-500 align-items:center;"> 
+
+                </div> 
+
+                <div> 
+
+                    <h3 class="text-xl font-bold">Chandani Secondary School</h3> 
+
+                    <p class="text-xs text-gray-400">Lalitpur, Nepal</p> 
+
+                </div> 
+
+            </div> 
+
+             
+
+            <div> 
+
+                <h4 class="text-lg font-bold mb-4">About Us</h4> 
+
+                <p class="text-gray-400 mb-4 text-sm"> 
+
+                    Providing quality education in Nepal since 1989. Committed to academic excellence and holistic development of students. 
+
+                </p> 
+
+                <div class="flex space-x-4"> 
+
+                    <a href="https://www.facebook.com/profile.php?id=100064005759165" class="text-gray-400 hover:text-white transition-colors"> 
+
+                        <i class="fab fa-facebook-f"></i> 
+
+                    </a> 
+
+                    </a> 
+
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"> 
+
+                        <i class="fab fa-instagram"></i> 
+
+                    </a> 
+
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"> 
+
+                        <i class="fab fa-youtube"></i> 
+
+                    </a> 
+
+                </div> 
+
+            </div> 
+
+
+
+            <div> 
+
+                <h4 class="text-lg font-bold mb-4">Quick Links</h4> 
+
+                <ul class="space-y-3"> 
+
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li> 
+
+                    <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li> 
+
+                    <li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li> 
+
+                    <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li> 
+
+                </ul> 
+
+            </div> 
+
+
+
+            <div> 
+
+                <h4 class="text-lg font-bold mb-4">Contact Us</h4> 
+
+                <address class="text-gray-400 not-italic text-sm"> 
+
+                    <div class="flex items-start mb-3"> 
+
+                        <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i> 
+
+                        <a href="https://www.google.com/maps/place/Chandani+Secondary+English+School/@27.6777437,85.326173,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb19c6b663dd47:0xaf78b3293d760622!8m2!3d27.677739!4d85.3287479!16s%2Fg%2F11b6rxsnj4?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"> 
+
+                            <span>Shankhamul, Lalitpur, Nepal</span> 
+
+                        </a> 
+
+                    </div> 
+
+                    <div class="flex items-start mb-3"> 
+
+                        <i class="fas fa-phone-alt mt-1 mr-3 text-blue-400"></i> 
+
+                        <a href="tel:+977-1-5912488"> 
+
+                            <span>+977-1-5912488</span> 
+
+                        </a> 
+
+                    </div> 
+
+                    <div class="flex items-start mb-3"> 
+
+                        <i class="fas fa-envelope mt-1 mr-3 text-blue-400"></i> 
+
+                        <a href="mailto:info@chandani.edu.np"> 
+
+                            <span>info@chandani.edu.np</span> 
+
+                        </a> 
+
+                    </div> 
+
+                    <div class="flex items-start"> 
+
+                        <i class="fas fa-clock mt-1 mr-3 text-blue-400"></i> 
+
+                        <span>Sunday-Friday: 9:00 AM - 4:00 PM</span> 
+
+                    </div> 
+
+                </address> 
+
+            </div> 
+
+        </div> 
+
+         
+
+        <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm"> 
+
+            <p>&copy; 2025 Chandani Secondary School. All Rights Reserved.</p> 
+
+
+
+        </div> 
+
+    </div> 
+
+</footer> 
+
+ 
+
+<!-- Back to Top Button --> 
+
+<button id="back-to-top" class="fixed bottom-5 right-5 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg hidden transition-all duration-300"> 
+
+    <i class="fas fa-arrow-up"></i> 
+
+</button> 
+
+ 
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
+<script> 
+
+    // Initialize AOS animation library 
+
+    AOS.init({ 
+
+        duration: 800, 
+
+        easing: 'ease-in-out', 
+
+        once: true, 
+
+        offset: 120 
+
+    }); 
+
+    feather.replace();
+
+    // Close popup function 
+
+    function closePopup() { 
+
+        const popup = document.getElementById('popup'); 
+
+        popup.style.opacity = '0'; 
+
+        setTimeout(() => { 
+
+            popup.style.display = 'none'; 
+
+        }, 300); 
+
+    } 
+
+     
+
+    // Close popup when clicking outside the image 
+
+    document.getElementById('popup').addEventListener('click', function(e) { 
+
+        if (e.target === this) { 
+
+            closePopup(); 
+
+        } 
+
+    }); 
+
+    // Mobile Menu Toggle 
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button'); 
+
+    const mobileMenu = document.getElementById('mobile-menu'); 
+
+     
+
+    mobileMenuButton.addEventListener('click', () => { 
+
+        mobileMenu.classList.toggle('hidden'); 
+
+        mobileMenuButton.innerHTML = mobileMenu.classList.contains('hidden') ?  
+
+            '<i class="fas fa-bars text-2xl"></i>' :  
+
+            '<i class="fas fa-times text-2xl"></i>'; 
+
+    }); 
+
+     
+
+    // Hero Slideshow 
+
+    const heroSlides = document.querySelectorAll('.hero-slide'); 
+
+    let currentSlide = 0; 
+
+     
+
+    function showSlide(n) { 
+
+        heroSlides.forEach(slide => slide.classList.remove('active')); 
+
+        heroSlides[n].classList.add('active'); 
+
+    } 
+
+     
+
+    function nextSlide() { 
+
+        currentSlide = (currentSlide + 1) % heroSlides.length; 
+
+        showSlide(currentSlide); 
+
+    } 
+
+     
+
+    // Change slide every 5 seconds 
+
+    setInterval(nextSlide, 5000); 
+
+     
+
+    // Counter Animation 
+
+    function animateCounter(elementId, target, duration = 2000) { 
+
+        const element = document.getElementById(elementId); 
+
+        const start = 0; 
+
+        const increment = target / (duration / 16); 
+
+        let current = start; 
+
+         
+
+        const timer = setInterval(() => { 
+
+            current += increment; 
+
+            if (current >= target) { 
+
+                clearInterval(timer); 
+
+                current = target; 
+
+            // Add '+' sign only at the end for students counter 
+
+            if (elementId === 'students-counter'|| elementId === 'alumni-counter') { 
+
+                element.textContent = Math.floor(current).toLocaleString() + '+'; 
+
+            } else { 
+
+                element.textContent = Math.floor(current).toLocaleString(); 
+
+            } 
+
+            } else { 
+
+                element.textContent = Math.floor(current).toLocaleString(); 
+
+            } 
+
+        }, 16); 
+
+    } 
+
+
+
+    // Intersection Observer for counter animation 
+
+    const observer = new IntersectionObserver((entries) => { 
+
+        entries.forEach(entry => { 
+
+            if (entry.isIntersecting) { 
+
+                animateCounter('years-counter', 36); 
+
+                animateCounter('students-counter', 250); 
+
+                animateCounter('teachers-counter', 24); 
+
+                animateCounter('alumni-counter', 3200); 
+
+                observer.unobserve(entry.target); 
+
+            } 
+
+        }); 
+
+    }, {threshold: 0.5}); 
+
+
+
+    const counterSection = document.querySelector('.counter-item').parentElement.parentElement; 
+
+    observer.observe(counterSection); 
+
+     
+
+    // Back to Top Button 
+
+    const backToTopButton = document.getElementById('back-to-top'); 
+
+     
+
+    window.addEventListener('scroll', () => { 
+
+        // Alert if content exceeds viewport 
+
+        if (document.documentElement.scrollWidth > window.innerWidth) { 
+
+            console.warn('Content exceeds viewport width!'); 
+
+            document.body.style.overflowX = 'hidden'; 
+
+        } 
+
+        // Force mobile viewport 
+
+        if (window.innerWidth <= 768) { 
+
+            document.querySelector('meta[name="viewport"]') 
+
+            .setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0'); 
+
+        } 
+
+        if (window.pageYOffset > 300) { 
+
+            backToTopButton.classList.remove('hidden'); 
+
+        } else { 
+
+            backToTopButton.classList.add('hidden'); 
+
+        } 
+
+    }); 
+
+     
+
+    backToTopButton.addEventListener('click', () => { 
+
+        window.scrollTo({ top: 0, behavior: 'smooth' }); 
+
+    }); 
+
+     
+
+    // Smooth scrolling for navigation links 
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => { 
+
+        anchor.addEventListener('click', function (e) { 
+
+            e.preventDefault(); 
+
+             
+
+            const targetId = this.getAttribute('href'); 
+
+            if (targetId === '#') return; 
+
+             
+
+            const targetElement = document.querySelector(targetId); 
+
+            if (targetElement) { 
+
+                window.scrollTo({ 
+
+                    top: targetElement.offsetTop - 100, 
+
+                    behavior: 'smooth' 
+
+                }); 
+
+                 
+
+                // Close mobile menu if open 
+
+                if (!mobileMenu.classList.contains('hidden')) { 
+
+                    mobileMenu.classList.add('hidden'); 
+
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>'; 
+
+                } 
+
+            } 
+
+        }); 
+
+    }); 
+
+</script> 
 </body>
 </html>
